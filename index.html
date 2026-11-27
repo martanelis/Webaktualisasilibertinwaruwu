@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIRAPI — UPTD Puskesmas Non Rawat Inap Mandrehe Utara</title>
-
-  <!-- Tailwind CSS CDN -->
+  <title>SIPATUH — UPTD Puskesmas Non Rawat Inap Mandrehe Utara</title>
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Chart.js CDN v4.4.1 -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
           }
         }
       }
-    };
+    }
   </script>
 
   <style>
@@ -70,10 +70,10 @@
 <body class="bg-slate-100/80 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
   <!-- ===================================================================== -->
-  <!-- 1. HALAMAN LOGIN (OVERLAY PENUH HINGGA LOGIN VALID)                   -->
+  <!-- 1. HALAMAN LOGIN OVERLAY PENUH (TANPA HINT USERNAME/PASSWORD)         -->
   <!-- ===================================================================== -->
   <div id="loginScreen" class="fixed inset-0 z-50 bg-gradient-to-br from-sky-100 via-blue-50 to-emerald-50 flex flex-col justify-between p-4 md:p-8 overflow-y-auto">
-    <!-- Top Instansi Header -->
+    <!-- Top Instansi Logos -->
     <div class="max-w-6xl w-full mx-auto flex flex-wrap items-center justify-between gap-4 pt-1">
       <div class="flex flex-wrap items-center gap-3 sm:gap-4">
         <div class="flex items-center gap-2.5 bg-white/90 backdrop-blur px-3.5 py-2 rounded-2xl shadow-sm border border-white">
@@ -106,81 +106,83 @@
       <div class="lg:col-span-7 text-center lg:text-left space-y-4">
         <div class="inline-flex items-center justify-center lg:justify-start gap-3">
           <div class="w-14 h-14 rounded-2xl bg-navy-900 text-white flex items-center justify-center shadow-lg relative">
-            <i class="fa-solid fa-droplet text-2xl text-sky-400"></i>
-            <i class="fa-solid fa-leaf text-sm text-emerald-400 absolute top-2.5 right-2.5"></i>
+            <i class="fa-solid fa-biohazard text-2xl text-amber-400"></i>
+            <i class="fa-solid fa-circle-check text-sm text-emerald-400 absolute top-2 right-2"></i>
           </div>
-          <span class="text-4xl md:text-5xl font-black tracking-tight text-navy-900">SIRAPI</span>
+          <span class="text-4xl md:text-5xl font-black tracking-tight text-navy-900">SIPATUH</span>
         </div>
         <h2 class="text-xl md:text-2xl font-extrabold text-navy-800 leading-snug">
-          Sistem Informasi Rekapitulasi dan Pendataan Sanitasi Total Berbasis Masyarakat & Kepatuhan SOP Pemilahan Sampah Medis
+          Optimalisasi Kepatuhan Petugas dalam Pemilahan Sampah Infeksius dan Noninfeksius
         </h2>
         <p class="text-sm font-bold text-emerald-700 italic">
-          "Bersama Wujudkan Desa Sehat dan Lingkungan Bersih"
+          "Pilah Sampah Sesuai SOP, Wujudkan Pelayanan Puskesmas Aman, Bersih, dan Bebas Infeksi"
         </p>
 
-        <!-- Ilustrasi Vektor Desa Bersih & Puskesmas -->
-        <div class="bg-white/75 backdrop-blur-sm border border-white rounded-3xl p-4 shadow-sm">
+        <!-- Ilustrasi Vektor Pemilahan Sampah Medis -->
+        <div class="bg-white/75 border border-white rounded-3xl p-4 shadow-sm">
           <svg viewBox="0 0 600 155" class="w-full h-auto rounded-2xl" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="bgSky" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="#e0f2fe"/>
                 <stop offset="100%" stop-color="#f0fdf4"/>
               </linearGradient>
-              <linearGradient id="hillGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#34d399"/>
-                <stop offset="100%" stop-color="#059669"/>
-              </linearGradient>
             </defs>
-            <rect width="600" height="155" fill="url(#skyGrad)" rx="16"/>
-            <circle cx="515" cy="36" r="20" fill="#fde047" opacity="0.85"/>
-            <path d="M0 115 Q150 75 310 112 T600 98 L600 155 L0 155 Z" fill="#a7f3d0"/>
-            <path d="M0 125 Q220 95 420 124 T600 115 L600 155 L0 155 Z" fill="url(#hillGrad)"/>
+            <rect width="600" height="155" fill="url(#bgSky)" rx="16"/>
+            <rect x="0" y="122" width="600" height="33" fill="#cbd5e1" opacity="0.45"/>
+
             <!-- Gedung Puskesmas -->
-            <rect x="65" y="64" width="115" height="58" rx="6" fill="#ffffff" stroke="#0f2942" stroke-width="2"/>
-            <polygon points="58,64 122.5,36 187,64" fill="#0f2942"/>
-            <rect x="114" y="45" width="17" height="5" rx="1" fill="#10b981"/>
-            <rect x="120" y="39" width="5" height="17" rx="1" fill="#10b981"/>
-            <rect x="112" y="92" width="20" height="30" rx="2" fill="#38bdf8"/>
-            <rect x="78" y="76" width="18" height="16" rx="2" fill="#bae6fd"/>
-            <rect x="148" y="76" width="18" height="16" rx="2" fill="#bae6fd"/>
-            <!-- Rumah Desa Sehat 1 -->
-            <rect x="255" y="78" width="68" height="44" rx="4" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
-            <polygon points="248,78 289,54 330,78" fill="#d97706"/>
-            <rect x="281" y="96" width="16" height="26" fill="#78350f"/>
-            <!-- Rumah Desa Sehat 2 -->
-            <rect x="360" y="82" width="62" height="40" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
-            <polygon points="354,82 391,60 428,82" fill="#0284c7"/>
-            <rect x="384" y="98" width="14" height="24" fill="#0369a1"/>
+            <rect x="45" y="48" width="160" height="74" rx="8" fill="#ffffff" stroke="#0f2942" stroke-width="2"/>
+            <polygon points="35,48 125,20 215,48" fill="#0f2942"/>
+            <rect x="116" y="29" width="18" height="5" rx="1" fill="#10b981"/>
+            <rect x="122.5" y="22.5" width="5" height="18" rx="1" fill="#10b981"/>
+            <rect x="110" y="84" width="30" height="38" rx="3" fill="#38bdf8"/>
+            <rect x="65" y="64" width="26" height="22" rx="3" fill="#bae6fd"/>
+            <rect x="159" y="64" width="26" height="22" rx="3" fill="#bae6fd"/>
+
+            <!-- Tong Sampah Kuning (Infeksius) -->
+            <rect x="265" y="62" width="56" height="60" rx="6" fill="#facc15" stroke="#ca8a04" stroke-width="2"/>
+            <rect x="260" y="54" width="66" height="10" rx="4" fill="#eab308" stroke="#a16207" stroke-width="1.5"/>
+            <circle cx="293" cy="92" r="12" fill="#fef08a"/>
+            <text x="293" y="96" text-anchor="middle" font-size="11" font-weight="bold" fill="#854d0e">B3</text>
+
+            <!-- Safety Box (Benda Tajam) -->
+            <rect x="355" y="72" width="48" height="50" rx="5" fill="#fde047" stroke="#dc2626" stroke-width="2"/>
+            <polygon points="352,72 379,58 406,72" fill="#ef4444"/>
+            <text x="379" y="101" text-anchor="middle" font-size="9" font-weight="bold" fill="#991b1b">TAJAM</text>
+
+            <!-- Tong Sampah Hitam (Noninfeksius) -->
+            <rect x="438" y="62" width="56" height="60" rx="6" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+            <rect x="433" y="54" width="66" height="10" rx="4" fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+            <circle cx="466" cy="92" r="12" fill="#475569"/>
+            <text x="466" y="96" text-anchor="middle" font-size="9" font-weight="bold" fill="#f8fafc">UMUM</text>
+
             <!-- Pohon Hijau -->
-            <rect x="215" y="95" width="6" height="26" fill="#78350f"/>
-            <circle cx="218" cy="86" r="16" fill="#10b981"/>
-            <rect x="462" y="92" width="6" height="28" fill="#78350f"/>
-            <circle cx="465" cy="82" r="18" fill="#059669"/>
-            <!-- Sungai Bersih -->
-            <path d="M510 120 Q485 135 520 155 L565 155 Q530 135 545 120 Z" fill="#38bdf8" opacity="0.8"/>
+            <rect x="536" y="88" width="7" height="34" fill="#78350f"/>
+            <circle cx="539.5" cy="76" r="20" fill="#10b981"/>
           </svg>
+
           <div class="grid grid-cols-3 gap-2 pt-3 text-center text-navy-900">
             <div class="bg-white/90 py-2 px-2 rounded-xl border border-slate-100">
-              <span class="text-xs font-extrabold block text-emerald-700">12 Desa Binaan</span>
-              <span class="text-[10px] text-slate-500">Kec. Mandrehe Utara</span>
+              <span class="text-xs font-extrabold block text-amber-600">Kantong Kuning & Safety Box</span>
+              <span class="text-[10px] text-slate-500">Sampah Infeksius & Tajam</span>
             </div>
             <div class="bg-white/90 py-2 px-2 rounded-xl border border-slate-100">
-              <span class="text-xs font-extrabold block text-blue-700">5 Pilar STBM</span>
-              <span class="text-[10px] text-slate-500">Pendataan & Rekap</span>
+              <span class="text-xs font-extrabold block text-slate-800">Kantong Hitam</span>
+              <span class="text-[10px] text-slate-500">Sampah Noninfeksius</span>
             </div>
             <div class="bg-white/90 py-2 px-2 rounded-xl border border-slate-100">
-              <span class="text-xs font-extrabold block text-amber-700">10 Indikator SOP</span>
-              <span class="text-[10px] text-slate-500">Pemilahan Sampah</span>
+              <span class="text-xs font-extrabold block text-emerald-700">10 Indikator SOP</span>
+              <span class="text-[10px] text-slate-500">9 Unit Pelayanan</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Right Login Card (Tanpa Hint/Petunjuk Kredensial) -->
+      <!-- Right Login Card -->
       <div class="lg:col-span-5">
         <div id="loginCardBox" class="bg-white rounded-3xl p-7 shadow-xl shadow-navy-900/10 border border-slate-100">
           <div class="text-center mb-5">
-            <h3 class="text-xl font-extrabold text-slate-900">Selamat Datang di SIRAPI</h3>
+            <h3 class="text-xl font-extrabold text-slate-900">Selamat Datang di SIPATUH</h3>
             <p class="text-xs text-slate-500 mt-1">Masukkan Username dan Password resmi petugas</p>
           </div>
 
@@ -220,7 +222,7 @@
     </div>
 
     <div class="text-center text-xs text-slate-500 pb-1">
-      SIRAPI | UPTD Puskesmas Non Rawat Inap Mandrehe Utara — Kabupaten Nias Barat
+      SIPATUH | UPTD Puskesmas Non Rawat Inap Mandrehe Utara — Kabupaten Nias Barat
     </div>
   </div>
 
@@ -230,18 +232,18 @@
   <div id="appShell" class="hidden min-h-screen flex flex-col lg:flex-row">
 
     <!-- SIDEBAR NAVIGASI KIRI (Dark Navy #0F2942) -->
-    <aside id="sidebar" class="fixed inset-y-0 left-0 z-30 w-64 bg-navy-900 text-white flex flex-col justify-between transform -translate-x-full lg:translate-x-0 lg:static transition-transform duration-200 ease-in-out shrink-0 shadow-xl no-print">
+    <aside id="sidebar" class="fixed inset-y-0 left-0 z-30 w-64 bg-navy-900 text-white flex flex-col justify-between transform -translate-x-full lg:translate-x-0 lg:static transition-transform duration-200 ease-in-out shrink-0 shadow-xl">
       <div>
         <!-- Brand Header -->
         <div class="h-20 px-6 flex items-center justify-between border-b border-white/10">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center relative border border-white/15">
-              <i class="fa-solid fa-droplet text-sky-400 text-xl"></i>
-              <i class="fa-solid fa-leaf text-emerald-400 text-xs absolute top-1.5 right-1.5"></i>
+              <i class="fa-solid fa-biohazard text-amber-400 text-xl"></i>
+              <i class="fa-solid fa-circle-check text-emerald-400 text-xs absolute top-1.5 right-1.5"></i>
             </div>
             <div>
-              <span class="text-xl font-black tracking-tight text-white block leading-none">SIRAPI</span>
-              <span class="text-[10px] text-sky-200/80 font-medium tracking-wide">Mandrehe Utara</span>
+              <span class="text-xl font-black tracking-tight text-white block leading-none">SIPATUH</span>
+              <span class="text-[10px] text-sky-200/80 font-medium tracking-wide">UPTD Puskesmas Mandrehe Utara</span>
             </div>
           </div>
           <button onclick="toggleSidebar()" class="lg:hidden text-slate-300 hover:text-white">
@@ -249,28 +251,16 @@
           </button>
         </div>
 
-        <!-- Menu Navigasi Utama -->
-        <nav class="p-3.5 space-y-1 text-xs font-semibold">
-          <p class="px-3 pt-1 pb-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">Ringkasan</p>
+        <!-- Menu Navigasi Fokus Kepatuhan SOP Pemilahan Sampah -->
+        <nav class="p-3.5 space-y-1.5 text-xs font-semibold">
+          <p class="px-3 pt-1 pb-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">Menu Utama</p>
           
           <button onclick="switchPage('dashboard')" id="nav-dashboard" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-blue-600 text-white shadow-sm transition text-left">
             <i class="fa-solid fa-house w-4 text-center"></i>
             <span>Dashboard Utama</span>
           </button>
 
-          <p class="px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">Modul 5 Pilar STBM</p>
-
-          <button onclick="switchPage('input-stbm')" id="nav-input-stbm" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:bg-white/10 hover:text-white transition text-left">
-            <i class="fa-solid fa-file-pen w-4 text-center text-emerald-400"></i>
-            <span>Input Data 5 Pilar STBM</span>
-          </button>
-
-          <button onclick="switchPage('rekap-stbm')" id="nav-rekap-stbm" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:bg-white/10 hover:text-white transition text-left">
-            <i class="fa-solid fa-table-cells w-4 text-center text-sky-400"></i>
-            <span>Rekapitulasi 5 Pilar STBM</span>
-          </button>
-
-          <p class="px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">Modul Limbah & SOP</p>
+          <p class="px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">Monitoring & Evaluasi SOP</p>
 
           <button onclick="switchPage('instrumen-sop')" id="nav-instrumen-sop" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:bg-white/10 hover:text-white transition text-left">
             <i class="fa-solid fa-clipboard-check w-4 text-center text-amber-400"></i>
@@ -278,20 +268,20 @@
           </button>
 
           <button onclick="switchPage('rekap-sop')" id="nav-rekap-sop" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:bg-white/10 hover:text-white transition text-left">
-            <i class="fa-solid fa-chart-bar w-4 text-center text-indigo-400"></i>
-            <span>Rekapitulasi Kepatuhan SOP</span>
+            <i class="fa-solid fa-table-list w-4 text-center text-emerald-400"></i>
+            <span>Rekapitulasi Per Ruangan</span>
           </button>
 
           <p class="px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">Sistem</p>
 
-          <button onclick="switchPage('pengaturan-akun')" id="nav-pengaturan-akun" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:bg-white/10 hover:text-white transition text-left">
-            <i class="fa-solid fa-user-gear w-4 text-center text-rose-300"></i>
+          <button onclick="switchPage('pengaturan')" id="nav-pengaturan" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-300 hover:bg-white/10 hover:text-white transition text-left">
+            <i class="fa-solid fa-user-gear w-4 text-center text-sky-300"></i>
             <span>Pengaturan Akun</span>
           </button>
         </nav>
       </div>
 
-      <!-- Tombol Keluar -->
+      <!-- Tombol Keluar (Logout Real) -->
       <div class="p-4 border-t border-white/10">
         <button onclick="handleLogout()" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold text-rose-200 bg-rose-500/15 hover:bg-rose-600 hover:text-white transition">
           <i class="fa-solid fa-arrow-right-from-bracket w-4 text-center"></i>
@@ -301,7 +291,7 @@
     </aside>
 
     <!-- OVERLAY MOBILE SIDEBAR -->
-    <div id="sidebarOverlay" onclick="toggleSidebar()" class="fixed inset-0 bg-slate-900/50 z-20 hidden lg:hidden no-print"></div>
+    <div id="sidebarOverlay" onclick="toggleSidebar()" class="fixed inset-0 bg-slate-900/50 z-20 hidden lg:hidden"></div>
 
     <!-- MAIN CONTENT WRAPPER -->
     <div class="flex-1 flex flex-col min-w-0">
@@ -350,349 +340,207 @@
       <main class="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto space-y-6">
 
         <!-- =============================================================== -->
-        <!-- PAGE 1: DASHBOARD UTAMA                                         -->
+        <!-- PAGE 1: DASHBOARD UTAMA SIPATUH                                 -->
         <!-- =============================================================== -->
         <section id="page-dashboard" class="space-y-6">
-          <!-- 4 Kartu KPI -->
+          <!-- Banner Ringkas SIPATUH -->
+          <div class="bg-gradient-to-r from-navy-900 via-navy-800 to-blue-900 text-white p-6 rounded-2xl shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1 max-w-2xl">
+              <span class="inline-block px-2.5 py-0.5 bg-white/15 rounded-full text-[10px] font-bold uppercase tracking-wider text-sky-200">
+                SIPATUH • Media Evaluasi Digital Berbasis QR Code
+              </span>
+              <h2 class="text-lg sm:text-xl font-extrabold tracking-tight">
+                Optimalisasi Kepatuhan Petugas dalam Pemilahan Sampah Infeksius dan Noninfeksius
+              </h2>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                Pemantauan kepatuhan Standar Operasional Prosedur (SOP) pemilahan sampah medis dan domestik pada 9 unit pelayanan UPTD Puskesmas Non Rawat Inap Mandrehe Utara.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 shrink-0">
+              <button onclick="switchPage('instrumen-sop')" class="px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-navy-950 font-extrabold text-xs rounded-xl shadow transition flex items-center gap-2">
+                <i class="fa-solid fa-plus"></i>
+                <span>Isi Instrumen Monitoring</span>
+              </button>
+              <button onclick="switchPage('rekap-sop')" class="px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs rounded-xl border border-white/20 transition">
+                Lihat Matriks 9 Ruangan
+              </button>
+            </div>
+          </div>
+
+          <!-- 4 Kartu KPI Utama -->
           <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
             <!-- KPI 1 -->
             <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between">
               <div>
-                <p class="text-xs font-bold text-slate-500">Jumlah Desa Terlapor</p>
-                <h3 class="text-2xl font-black text-slate-900 mt-1">12 / 12</h3>
-                <span class="inline-block mt-1 px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-md">
-                  100% Lengkap
-                </span>
+                <p class="text-xs font-semibold text-slate-500">Jumlah Unit Pelayanan</p>
+                <h3 class="text-2xl font-black text-slate-900 mt-1">9 Ruangan</h3>
+                <span class="inline-block mt-1 px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-md">100% Terpantau</span>
               </div>
               <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl">
-                <i class="fa-solid fa-map-location-dot"></i>
+                <i class="fa-solid fa-hospital-user"></i>
               </div>
             </div>
 
             <!-- KPI 2 -->
             <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between">
               <div>
-                <p class="text-xs font-bold text-slate-500">Jumlah KK Terdata</p>
-                <h3 class="text-2xl font-black text-slate-900 mt-1" id="kpiTotalKK">4.820</h3>
-                <span class="text-[11px] font-semibold text-slate-400 block mt-1">Kepala Keluarga (12 Desa)</span>
+                <p class="text-xs font-semibold text-slate-500">Total Observasi QR Code</p>
+                <h3 class="text-2xl font-black text-slate-900 mt-1"><span id="kpiTotalObs">5</span> <span class="text-sm font-bold text-slate-500">Log</span></h3>
+                <span class="text-[11px] font-semibold text-slate-500 block mt-1">Evaluasi Lapangan Aktif</span>
               </div>
-              <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
-                <i class="fa-solid fa-house-chimney-user"></i>
+              <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-qrcode"></i>
               </div>
             </div>
 
             <!-- KPI 3 -->
             <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between">
               <div>
-                <p class="text-xs font-bold text-slate-500">Rata-rata 5 Pilar STBM</p>
-                <h3 class="text-2xl font-black text-blue-600 mt-1" id="kpiAvgStbm">78,4%</h3>
-                <span class="inline-flex items-center gap-1 mt-1 text-[11px] font-bold text-emerald-600">
-                  <i class="fa-solid fa-arrow-trend-up"></i> Target STBM Tercapai
-                </span>
+                <p class="text-xs font-semibold text-slate-500">Rata-rata Kepatuhan Puskesmas</p>
+                <h3 class="text-2xl font-black text-emerald-600 mt-1" id="kpiAvgSop">94,4%</h3>
+                <span id="kpiBadgeSop" class="inline-block mt-1 px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-md">PATUH (Baik)</span>
               </div>
-              <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-xl">
-                <i class="fa-solid fa-droplet"></i>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-award"></i>
               </div>
             </div>
 
             <!-- KPI 4 -->
             <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center justify-between">
               <div>
-                <p class="text-xs font-bold text-slate-500">Kepatuhan SOP Sampah</p>
-                <h3 class="text-2xl font-black text-emerald-600 mt-1" id="kpiAvgSop">94,4%</h3>
-                <span id="kpiBadgeSop" class="inline-block mt-1 px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-md">
-                  PATUH (Baik)
-                </span>
+                <p class="text-xs font-semibold text-slate-500">Indikator Kepatuhan SOP</p>
+                <h3 class="text-2xl font-black text-navy-900 mt-1">10 Indikator</h3>
+                <span class="text-[11px] font-bold text-amber-600 block mt-1">Standar Permenkes & PPI</span>
               </div>
               <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl">
-                <i class="fa-solid fa-biohazard"></i>
+                <i class="fa-solid fa-list-check"></i>
               </div>
             </div>
           </div>
 
-          <!-- Row 2: Grafik Tren Pelaporan 3 Bulan & Donut Chart 5 Pilar STBM -->
+          <!-- Baris Grafik 1: Grafik Batang 9 Ruangan & Grafik Donut Kategori Kepatuhan -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            <!-- Tren Pelaporan 3 Bulan -->
-            <div class="lg:col-span-6 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
-              <div class="flex items-center justify-between mb-4">
+            <!-- Grafik Batang Capaian Per 9 Ruangan -->
+            <div class="lg:col-span-7 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                 <div>
-                  <h3 class="font-extrabold text-slate-900 text-sm sm:text-base">Tren Pelaporan 3 Bulan Terakhir</h3>
-                  <p class="text-xs text-slate-500">Perbandingan progres capaian 5 Pilar STBM & Kepatuhan SOP</p>
+                  <h3 class="font-extrabold text-slate-900 text-base">Capaian Kepatuhan Pemilahan Sampah Per Ruangan</h3>
+                  <p class="text-xs text-slate-500">Standar minimal kategori PATUH (Baik) adalah ≥ 80% (Garis Merah Putus-putus)</p>
                 </div>
-                <span class="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700">Triwulan IV</span>
+                <span class="text-xs font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full self-start sm:self-auto">9 Unit</span>
               </div>
-              <div class="h-64 w-full relative">
-                <canvas id="dashTrendChart"></canvas>
+              <div class="h-64 w-full">
+                <canvas id="dashBarRuanganChart"></canvas>
               </div>
             </div>
 
-            <!-- Donut Chart Capaian 5 Pilar STBM -->
-            <div class="lg:col-span-6 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
-              <div class="flex items-center justify-between mb-3">
-                <div>
-                  <h3 class="font-extrabold text-slate-900 text-sm sm:text-base">Capaian 5 Pilar STBM</h3>
-                  <p class="text-xs text-slate-500">Rata-rata persentase perilaku sanitasi 12 desa binaan</p>
-                </div>
-                <button onclick="switchPage('rekap-stbm')" class="text-xs font-bold text-blue-600 hover:underline">Detail Desa &rarr;</button>
+            <!-- Grafik Donut Proporsi Kategori Kepatuhan Ruangan -->
+            <div class="lg:col-span-5 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-base">Proporsi Kategori Kepatuhan Ruangan</h3>
+                <p class="text-xs text-slate-500 mb-4">Distribusi tingkat kepatuhan 9 unit pelayanan terhadap SOP</p>
               </div>
-
               <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center my-auto">
-                <div class="sm:col-span-5 h-52 relative flex items-center justify-center">
-                  <canvas id="dashDoughnut5Pilar"></canvas>
+                <div class="sm:col-span-5 relative h-44 flex items-center justify-center">
+                  <canvas id="dashDoughnutKategori"></canvas>
                   <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                    <span class="text-xl font-black text-navy-900" id="doughnutCenterText">78,4%</span>
-                    <span class="text-[10px] font-bold text-slate-400 uppercase">Rata-Rata</span>
+                    <span id="doughnutCenterText" class="text-xl font-black text-navy-900">94,4%</span>
+                    <span class="text-[10px] font-semibold text-slate-400">Rata-rata</span>
                   </div>
                 </div>
-                <div class="sm:col-span-7 space-y-1.5 text-xs" id="doughnutLegendList">
-                  <!-- Populated by JS -->
+                <div class="sm:col-span-7 space-y-2 text-xs" id="doughnutLegendList">
+                  <!-- Diisi otomatis via JS -->
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Row 3: Grafik Batang Capaian Kepatuhan Pemilahan Sampah per Ruangan -->
+          <!-- Baris Grafik 2: Capaian Per 10 Indikator SOP Pemilahan Sampah -->
           <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <h3 class="font-extrabold text-slate-900 text-sm sm:text-base">Capaian Kepatuhan Pemilahan Sampah Medis per Ruangan</h3>
-                <p class="text-xs text-slate-500">Evaluasi 10 Indikator SOP pada 9 Ruangan / Unit Pelayanan UPTD Puskesmas Mandrehe Utara</p>
+                <h3 class="font-extrabold text-slate-900 text-base">Capaian Kepatuhan Per 10 Indikator SOP (Ind. 1 s.d. Ind. 10)</h3>
+                <p class="text-xs text-slate-500">Analisis persentase kepatuhan tiap langkah SOP di seluruh ruangan untuk mendeteksi titik lemah pemilahan</p>
               </div>
-              <button onclick="switchPage('rekap-sop')" class="text-xs font-bold text-blue-600 hover:underline self-start sm:self-auto">Lihat Matriks 10 Indikator &rarr;</button>
+              <button onclick="switchPage('rekap-sop')" class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 self-start sm:self-auto">
+                <span>Lihat Detail Matriks</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-            <div class="h-72 w-full relative">
-              <canvas id="dashBarRuanganChart"></canvas>
+            <div class="h-60 w-full">
+              <canvas id="dashBarIndikatorChart"></canvas>
             </div>
           </div>
-        </section>
 
-        <!-- =============================================================== -->
-        <!-- PAGE 2: INPUT DATA 5 PILAR STBM (12 DESA MANDREHE UTARA)        -->
-        <!-- =============================================================== -->
-        <section id="page-input-stbm" class="hidden space-y-6">
-          <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm max-w-4xl mx-auto">
-            <div class="border-b border-slate-100 pb-4 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <div>
-                <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-md">Formulir Pelaporan STBM Desa</span>
-                <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 mt-1">Input & Pembaruan Capaian 5 Pilar STBM</h2>
-                <p class="text-xs text-slate-500">Pilih desa binaan di Kecamatan Mandrehe Utara untuk memperbarui data KK dan persentase 5 Pilar</p>
-              </div>
-            </div>
-
-            <form onsubmit="handleSaveStbm(event)" class="space-y-5 text-xs">
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label class="block font-bold text-slate-700 mb-1">Nama Desa Binaan <span class="text-rose-500">*</span></label>
-                  <select id="stbmDesa" onchange="prefillDesaStbmValues()" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none">
-                    <option value="Hilimbuasi">1. Desa Hilimbuasi</option>
-                    <option value="Lahagu">2. Desa Lahagu</option>
-                    <option value="Lologundre">3. Desa Lologundre</option>
-                    <option value="Ononamolo I">4. Desa Ononamolo I</option>
-                    <option value="Taraha">5. Desa Taraha</option>
-                    <option value="Balodano">6. Desa Balodano</option>
-                    <option value="Hilisangawola">7. Desa Hilisangawola</option>
-                    <option value="Sihareo">8. Desa Sihareo</option>
-                    <option value="Tarahoso">9. Desa Tarahoso</option>
-                    <option value="Onolimbu Raya">10. Desa Onolimbu Raya</option>
-                    <option value="Hiliwalo'o">11. Desa Hiliwalo'o</option>
-                    <option value="Mazingo">12. Desa Mazingo</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label class="block font-bold text-slate-700 mb-1">Tanggal Pendataan <span class="text-rose-500">*</span></label>
-                  <input type="date" id="stbmTanggal" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none">
-                </div>
-
-                <div>
-                  <label class="block font-bold text-slate-700 mb-1">Jumlah KK Sasaran <span class="text-rose-500">*</span></label>
-                  <input type="number" id="stbmJumlahKK" min="1" value="420" required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none">
-                </div>
-              </div>
-
-              <div>
-                <label class="block font-bold text-slate-700 mb-1">Nama Petugas / Bidan Desa Pelapor <span class="text-rose-500">*</span></label>
-                <input type="text" id="stbmPetugas" value="Libertin Riniati Waruwu, S.K.M." required class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none">
-              </div>
-
-              <!-- Input 5 Pilar STBM -->
-              <div class="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200/80 space-y-4">
-                <h3 class="font-extrabold text-navy-900 text-sm flex items-center gap-2">
-                  <i class="fa-solid fa-list-check text-blue-600"></i>
-                  Persentase Capaian 5 Pilar STBM (%)
-                </h3>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-                  <div class="bg-white p-3 rounded-xl border border-slate-200">
-                    <label class="block font-extrabold text-emerald-700 mb-1">Pilar 1: Stop BABS (%)</label>
-                    <input type="number" id="stbmP1" min="0" max="100" step="0.1" value="86" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg font-black text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                    <span class="text-[10px] text-slate-400 block mt-1">Akses Jamban Sehat</span>
-                  </div>
-
-                  <div class="bg-white p-3 rounded-xl border border-slate-200">
-                    <label class="block font-extrabold text-blue-700 mb-1">Pilar 2: CTPS (%)</label>
-                    <input type="number" id="stbmP2" min="0" max="100" step="0.1" value="78" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg font-black text-slate-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
-                    <span class="text-[10px] text-slate-400 block mt-1">Cuci Tangan Pakai Sabun</span>
-                  </div>
-
-                  <div class="bg-white p-3 rounded-xl border border-slate-200">
-                    <label class="block font-extrabold text-cyan-700 mb-1">Pilar 3: PAMM-RT (%)</label>
-                    <input type="number" id="stbmP3" min="0" max="100" step="0.1" value="82" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg font-black text-slate-900 focus:ring-2 focus:ring-cyan-500 focus:outline-none">
-                    <span class="text-[10px] text-slate-400 block mt-1">Air Minum & Makanan</span>
-                  </div>
-
-                  <div class="bg-white p-3 rounded-xl border border-slate-200">
-                    <label class="block font-extrabold text-amber-700 mb-1">Pilar 4: PS-RT (%)</label>
-                    <input type="number" id="stbmP4" min="0" max="100" step="0.1" value="79" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg font-black text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                    <span class="text-[10px] text-slate-400 block mt-1">Pengamanan Sampah RT</span>
-                  </div>
-
-                  <div class="bg-white p-3 rounded-xl border border-slate-200">
-                    <label class="block font-extrabold text-indigo-700 mb-1">Pilar 5: PLC-RT (%)</label>
-                    <input type="number" id="stbmP5" min="0" max="100" step="0.1" value="76" required class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg font-black text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-                    <span class="text-[10px] text-slate-400 block mt-1">Limbah Cair / SPAL</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-wrap justify-end gap-3 pt-2">
-                <button type="button" onclick="switchPage('rekap-stbm')" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition">
-                  Lihat Rekapitulasi
-                </button>
-                <button type="submit" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-xl shadow-md shadow-blue-600/20 transition flex items-center gap-2">
-                  <i class="fa-solid fa-floppy-disk"></i>
-                  <span>Simpan ke Rekapitulasi STBM</span>
-                </button>
-              </div>
-            </form>
-          </div>
-        </section>
-
-        <!-- =============================================================== -->
-        <!-- PAGE 3: REKAPITULASI 5 PILAR STBM (12 DESA)                     -->
-        <!-- =============================================================== -->
-        <section id="page-rekap-stbm" class="hidden space-y-6">
-          <!-- Grafik Perbandingan 12 Desa -->
+          <!-- Ringkasan Cepat Status 9 Ruangan Pelayanan -->
           <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div class="flex items-center justify-between">
               <div>
-                <h3 class="font-extrabold text-slate-900 text-base">Grafik Skor Rata-Rata 5 Pilar STBM pada 12 Desa</h3>
-                <p class="text-xs text-slate-500">Wilayah Kerja UPTD Puskesmas Non Rawat Inap Mandrehe Utara</p>
+                <h3 class="font-extrabold text-slate-900 text-base">Ringkasan Status Kepatuhan 9 Ruangan Pelayanan</h3>
+                <p class="text-xs text-slate-500">Pemantauan langsung hasil skor terbaru per unit pelayanan</p>
               </div>
-              <div class="flex flex-wrap gap-2">
-                <button onclick="exportStbmCsv()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
-                  <i class="fa-solid fa-file-csv"></i> Ekspor CSV
-                </button>
-                <button onclick="printSection('stbmPrintArea')" class="px-3.5 py-2 bg-navy-900 hover:bg-navy-800 text-white text-xs font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
-                  <i class="fa-solid fa-print"></i> Cetak Rekap
-                </button>
-              </div>
+              <button onclick="switchPage('instrumen-sop')" class="text-xs font-bold text-emerald-700 hover:underline">
+                + Update Skor Ruangan
+              </button>
             </div>
-            <div class="h-64 w-full relative">
-              <canvas id="stbmDesaBarChart"></canvas>
-            </div>
-          </div>
-
-          <!-- Tabel Rekapitulasi 12 Desa -->
-          <div id="stbmPrintArea" class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
-            <div class="p-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-50/60">
-              <div>
-                <h3 class="font-extrabold text-slate-900 text-sm sm:text-base">Tabel Rekapitulasi Capaian 5 Pilar STBM (12 Desa)</h3>
-                <p class="text-xs text-slate-500">UPTD Puskesmas Non Rawat Inap Mandrehe Utara</p>
-              </div>
-              <div class="flex items-center gap-2 no-print">
-                <select id="filterDesaDropdown" onchange="renderStbmDesaTable()" class="px-3 py-2 text-xs bg-white border border-slate-200 rounded-xl font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                  <option value="">Semua Desa (12 Desa)</option>
-                  <option value="Hilimbuasi">Desa Hilimbuasi</option>
-                  <option value="Lahagu">Desa Lahagu</option>
-                  <option value="Lologundre">Desa Lologundre</option>
-                  <option value="Ononamolo I">Desa Ononamolo I</option>
-                  <option value="Taraha">Desa Taraha</option>
-                  <option value="Balodano">Desa Balodano</option>
-                  <option value="Hilisangawola">Desa Hilisangawola</option>
-                  <option value="Sihareo">Desa Sihareo</option>
-                  <option value="Tarahoso">Desa Tarahoso</option>
-                  <option value="Onolimbu Raya">Desa Onolimbu Raya</option>
-                  <option value="Hiliwalo'o">Desa Hiliwalo'o</option>
-                  <option value="Mazingo">Desa Mazingo</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs border-collapse">
-                <thead class="bg-slate-100 text-slate-700 font-extrabold uppercase text-[11px] border-b border-slate-200">
-                  <tr>
-                    <th class="py-3 px-3.5">No</th>
-                    <th class="py-3 px-3.5">Nama Desa</th>
-                    <th class="py-3 px-3.5">Petugas / Bidan Desa</th>
-                    <th class="py-3 px-3.5 text-center">Jumlah KK</th>
-                    <th class="py-3 px-3 text-center text-emerald-800">Pilar 1<br><span class="text-[9px] font-normal">(Stop BABS)</span></th>
-                    <th class="py-3 px-3 text-center text-blue-800">Pilar 2<br><span class="text-[9px] font-normal">(CTPS)</span></th>
-                    <th class="py-3 px-3 text-center text-cyan-800">Pilar 3<br><span class="text-[9px] font-normal">(PAMM-RT)</span></th>
-                    <th class="py-3 px-3 text-center text-amber-800">Pilar 4<br><span class="text-[9px] font-normal">(Sampah RT)</span></th>
-                    <th class="py-3 px-3 text-center text-indigo-800">Pilar 5<br><span class="text-[9px] font-normal">(Limbah Cair)</span></th>
-                    <th class="py-3 px-3.5 text-center">Total Skor</th>
-                    <th class="py-3 px-3.5 text-center">Status Desa</th>
-                  </tr>
-                </thead>
-                <tbody id="tbodyStbmDesa" class="divide-y divide-slate-100 font-medium text-slate-700">
-                  <!-- Populated by JS -->
-                </tbody>
-              </table>
+            <div id="dashboardRoomCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+              <!-- Diisi otomatis via JS -->
             </div>
           </div>
         </section>
 
         <!-- =============================================================== -->
-        <!-- PAGE 4: INSTRUMEN MONITORING SOP PEMILAHAN SAMPAH (10 INDIKATOR)-->
+        <!-- PAGE 2: INSTRUMEN MONITORING SOP PEMILAHAN SAMPAH (10 INDIKATOR)-->
         <!-- =============================================================== -->
         <section id="page-instrumen-sop" class="hidden space-y-6">
-          <div id="instrumenPrintArea" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm max-w-5xl mx-auto space-y-6">
+          <div id="printInstrumenArea" class="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 md:p-8 max-w-5xl mx-auto space-y-6">
             
             <!-- KOP SURAT RESMI UPTD PUSKESMAS MANDREHE UTARA -->
-            <div class="border-b-4 border-double border-slate-900 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="border-b-4 border-double border-slate-900 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center">
               <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 text-amber-700 flex flex-col items-center justify-center shrink-0">
                 <i class="fa-solid fa-landmark text-xl"></i>
-                <span class="text-[8px] font-extrabold uppercase mt-0.5">Nias Barat</span>
+                <span class="text-[8px] font-black mt-0.5">NIAS BARAT</span>
               </div>
-              <div class="flex-1 text-center">
-                <p class="text-xs font-extrabold uppercase tracking-wider text-slate-700">PEMERINTAH KABUPATEN NIAS BARAT</p>
-                <p class="text-xs font-extrabold uppercase tracking-wider text-slate-700">DINAS KESEHATAN</p>
-                <h2 class="text-base sm:text-lg font-black uppercase text-navy-900 mt-0.5">UPTD PUSKESMAS NON RAWAT INAP MANDREHE UTARA</h2>
-                <p class="text-[11px] text-slate-500 mt-0.5">Alamat: Desa Lahagu Kecamatan Mandrehe Utara Kabupaten Nias Barat Provinsi Sumatera Utara</p>
+              <div class="space-y-0.5">
+                <p class="text-xs font-extrabold uppercase tracking-wide text-slate-800">PEMERINTAH KABUPATEN NIAS BARAT</p>
+                <p class="text-sm font-extrabold uppercase tracking-wide text-slate-900">DINAS KESEHATAN</p>
+                <h2 class="text-base md:text-lg font-black uppercase text-navy-900">UPTD PUSKESMAS NON RAWAT INAP MANDREHE UTARA</h2>
+                <p class="text-[11px] text-slate-600">Alamat: Desa Lahagu Kecamatan Mandrehe Utara Kabupaten Nias Barat Provinsi Sumatera Utara</p>
                 <p class="text-[10px] text-slate-500">Kode Pos: 22813, Hp: 082165518675, e-mail: puskesmasmandreheutara@gmail.com</p>
               </div>
               <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-700 flex flex-col items-center justify-center shrink-0">
-                <i class="fa-solid fa-kit-medical text-xl"></i>
-                <span class="text-[8px] font-extrabold uppercase mt-0.5">Bakti Husada</span>
+                <i class="fa-solid fa-staff-snake text-xl"></i>
+                <span class="text-[8px] font-black mt-0.5">BAKTI HUSADA</span>
               </div>
             </div>
 
+            <!-- JUDUL INSTRUMEN -->
             <div class="text-center space-y-1">
-              <h3 class="text-sm sm:text-base font-black uppercase text-slate-900">
+              <h3 class="text-sm md:text-base font-black uppercase text-slate-900 leading-snug">
                 INSTRUMEN MONITORING DAN EVALUASI KEPATUHAN PETUGAS DALAM PEMILAHAN SAMPAH INFEKSIUS DAN NONINFEKSIUS SESUAI STANDAR OPERASIONAL PROSEDUR (SOP)
               </h3>
-              <p class="text-xs font-semibold text-blue-700">(Media Evaluasi Digital Berbasis QR Code — UPTD Puskesmas Mandrehe Utara)</p>
+              <p class="text-xs font-semibold text-blue-700">(Media Evaluasi Digital Berbasis QR Code – Kegiatan 5 Aktualisasi)</p>
             </div>
 
             <form onsubmit="handleSaveSopObservation(event)" class="space-y-6 text-xs">
-              <!-- A. IDENTITAS PEMANTAUAN -->
-              <div class="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200 space-y-4">
-                <h4 class="font-extrabold text-navy-900 text-xs uppercase tracking-wider border-b border-slate-200 pb-2">
-                  A. Identitas Pemantauan
-                </h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- BAGIAN A: IDENTITAS PEMANTAUAN -->
+              <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 space-y-4">
+                <h4 class="font-extrabold text-navy-900 text-sm">A. IDENTITAS PEMANTAUAN</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   <div>
                     <label class="block font-bold text-slate-700 mb-1">Hari / Tanggal Pemantauan <span class="text-rose-500">*</span></label>
                     <input type="date" id="sopTanggal" required class="w-full px-3.5 py-2.5 bg-white border border-slate-200 rounded-xl font-semibold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none">
                   </div>
                   <div>
-                    <label class="block font-bold text-slate-700 mb-1">Nama Petugas Pemantau <span class="text-rose-500">*</span></label>
-                    <input type="text" id="sopPemantau" value="Libertin Riniati Waruwu, S.K.M." required class="w-full px-3.5 py-2.5 bg-white border border-slate-200 rounded-xl font-bold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                    <label class="block font-bold text-slate-700 mb-1">Waktu / Jam Observasi (WIB) <span class="text-rose-500">*</span></label>
+                    <input type="text" id="sopJamObservasi" value="09:00 WIB s.d. 09:30 WIB" required class="w-full px-3.5 py-2.5 bg-white border border-slate-200 rounded-xl font-semibold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none">
                   </div>
                   <div>
-                    <label class="block font-bold text-slate-700 mb-1">Ruangan / Unit Pelayanan (9 Ruangan) <span class="text-rose-500">*</span></label>
+                    <label class="block font-bold text-slate-700 mb-1">Nama Petugas Pemantau <span class="text-rose-500">*</span></label>
+                    <input type="text" id="sopPemantau" value="Libertin Riniati Waruwu, S.K.M." required class="w-full px-3.5 py-2.5 bg-white border border-slate-200 rounded-xl font-semibold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="block font-bold text-slate-700 mb-1">Ruangan / Unit Pelayanan <span class="text-rose-500">*</span></label>
                     <select id="sopRuangan" required class="w-full px-3.5 py-2.5 bg-white border border-slate-200 rounded-xl font-bold text-navy-900 focus:ring-2 focus:ring-blue-600 focus:outline-none">
                       <option value="Ruang Pendaftaran & Rekam Medis">1. Ruang Pendaftaran & Rekam Medis</option>
                       <option value="Ruang Pemeriksaan Umum (Poli Umum)">2. Ruang Pemeriksaan Umum (Poli Umum)</option>
@@ -708,82 +556,79 @@
                 </div>
               </div>
 
-              <!-- B. DAFTAR TILIK (CHECKLIST) 10 INDIKATOR -->
+              <!-- BAGIAN B: DAFTAR TILIK (CHECKLIST) 10 INDIKATOR -->
               <div class="space-y-3">
-                <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div>
-                    <h4 class="font-extrabold text-navy-900 text-xs uppercase tracking-wider">
-                      B. Daftar Tilik (Checklist) Observasi Kepatuhan Petugas Sesuai SOP (10 Indikator)
-                    </h4>
-                    <p class="text-[11px] text-slate-500">Pilih <strong>Patuh (Skor 1)</strong> apabila sesuai SOP, atau <strong>Tidak Patuh (Skor 0)</strong> apabila terjadi penyimpangan.</p>
+                    <h4 class="font-extrabold text-navy-900 text-sm">B. DAFTAR TILIK (CHECKLIST) OBSERVASI KEPATUHAN PETUGAS SESUAI SOP</h4>
+                    <p class="text-[11px] text-slate-500">Pilih <strong>Patuh (Skor 1)</strong> apabila petugas melaksanakan langkah sesuai SOP, atau <strong>Tidak Patuh (Skor 0)</strong> apabila melakukan penyimpangan.</p>
                   </div>
                   <div class="flex gap-2 no-print">
-                    <button type="button" onclick="setAllSopIndicators(1)" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold rounded-lg border border-emerald-200 transition">
-                      Centang Semua Patuh (1)
-                    </button>
-                    <button type="button" onclick="setAllSopIndicators(0)" class="px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold rounded-lg border border-rose-200 transition">
-                      Reset Semua (0)
-                    </button>
+                    <button type="button" onclick="setAllSopIndicators(1)" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold rounded-lg border border-emerald-200">Centang Semua Patuh</button>
+                    <button type="button" onclick="setAllSopIndicators(0)" class="px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold rounded-lg border border-rose-200">Reset Skor 0</button>
                   </div>
                 </div>
 
-                <div class="overflow-x-auto border border-slate-200 rounded-2xl">
-                  <table class="w-full text-left text-xs border-collapse">
-                    <thead class="bg-navy-900 text-white font-bold uppercase text-[11px]">
+                <div class="overflow-x-auto rounded-2xl border border-slate-200">
+                  <table class="w-full text-left text-xs">
+                    <thead class="bg-navy-900 text-white text-[11px] uppercase">
                       <tr>
-                        <th class="py-3 px-3 text-center w-12">No</th>
+                        <th class="py-3 px-3 text-center w-10">No</th>
                         <th class="py-3 px-3.5">Aspek & Kriteria Perilaku Kepatuhan Petugas Sesuai SOP</th>
-                        <th class="py-3 px-3 text-center w-24 bg-emerald-700">Patuh<br><span class="text-[9px] font-normal">(Skor 1)</span></th>
-                        <th class="py-3 px-3 text-center w-24 bg-rose-700">Tidak Patuh<br><span class="text-[9px] font-normal">(Skor 0)</span></th>
-                        <th class="py-3 px-3.5 w-52">Keterangan / Temuan</th>
+                        <th class="py-3 px-3 text-center w-24 bg-emerald-800">Patuh<br>(Skor 1)</th>
+                        <th class="py-3 px-3 text-center w-24 bg-rose-900">Tidak Patuh<br>(Skor 0)</th>
+                        <th class="py-3 px-3 w-48">Keterangan / Temuan Lapangan</th>
                       </tr>
                     </thead>
-                    <tbody id="checklistSopBody" class="divide-y divide-slate-200 bg-white">
-                      <!-- Populated by JS -->
+                    <tbody id="checklistSopBody" class="divide-y divide-slate-200">
+                      <!-- Diisi via JS -->
                     </tbody>
                   </table>
                 </div>
               </div>
 
-              <!-- C. PERHITUNGAN PERSENTASE & KRITERIA OTOMATIS -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-blue-50/70 p-5 rounded-2xl border border-blue-200">
+              <!-- BAGIAN C: PERHITUNGAN PERSENTASE & KRITERIA OTOMATIS -->
+              <div class="bg-blue-50/70 p-5 rounded-2xl border border-blue-200/80 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                 <div class="space-y-1">
-                  <h4 class="font-extrabold text-navy-900 text-xs uppercase">C. Perhitungan Persentase Kepatuhan</h4>
-                  <p class="text-[11px] text-slate-600">Rumus: <strong>(Total Skor Patuh &divide; 10) &times; 100%</strong></p>
+                  <h4 class="font-extrabold text-navy-900 text-sm">C. PERHITUNGAN PERSENTASE & KRITERIA TINGKAT KEPATUHAN</h4>
+                  <p class="text-[11px] text-slate-600">Rumus: <code class="bg-white px-1.5 py-0.5 rounded border border-slate-200">(Total Skor 'Patuh' ÷ 10) × 100%</code></p>
                   <div class="pt-2 flex items-baseline gap-3">
-                    <span class="text-xs font-bold text-slate-600">Total Skor: <strong id="liveSopScore" class="text-lg text-navy-900">10</strong> / 10</span>
-                    <span class="text-xs font-bold text-slate-600">&rarr; Persentase: <strong id="liveSopPercent" class="text-2xl font-black text-blue-700">100%</strong></span>
+                    <span class="text-xs font-bold text-slate-600">Total Skor:</span>
+                    <span class="text-2xl font-black text-navy-900"><span id="liveSopScore">10</span> / 10</span>
+                    <span class="text-2xl font-black text-blue-700">(<span id="liveSopPercent">100%</span>)</span>
                   </div>
                 </div>
-                <div class="flex flex-col justify-center">
-                  <span class="text-[11px] font-bold text-slate-600 mb-1.5">Kategori Tingkat Kepatuhan Otomatis:</span>
+                <div class="md:text-right space-y-1.5">
+                  <span class="text-[11px] font-bold text-slate-500 block uppercase">Kategori Tingkat Kepatuhan:</span>
+                  <div id="liveSopCategoryBadge" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-100 text-emerald-800 font-extrabold text-sm border border-emerald-300">
+                    <i class="fa-solid fa-circle-check"></i> PATUH (Baik) : 80% – 100%
+                  </div>
+                </div>
+              </div>
+
+              <!-- BAGIAN D: CATATAN KETIDAKSESUAIAN & RENCANA TINDAK LANJUT -->
+              <div class="space-y-3">
+                <h4 class="font-extrabold text-navy-900 text-sm">D. CATATAN KETIDAKSESUAIAN DAN RENCANA TINDAK LANJUT</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <span id="liveSopCategoryBadge" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-100 text-emerald-800 font-extrabold text-sm border border-emerald-300">
-                      <i class="fa-solid fa-circle-check"></i> PATUH (Baik) : 80% – 100%
-                    </span>
+                    <label class="block font-bold text-slate-700 mb-1">1. Kendala / Ketidaksesuaian yang Ditemukan</label>
+                    <textarea id="sopKendala" rows="2" placeholder="Tuliskan kendala atau ketidaksesuaian yang ditemukan di lapangan..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none"></textarea>
+                  </div>
+                  <div>
+                    <label class="block font-bold text-slate-700 mb-1">2. Umpan Balik / Tindak Lanjut Perbaikan</label>
+                    <textarea id="sopTindakLanjut" rows="2" placeholder="Tuliskan umpan balik atau rencana tindak lanjut perbaikan..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none"></textarea>
                   </div>
                 </div>
               </div>
 
-              <!-- D. CATATAN KETIDAKSESUAIAN & RENCANA TINDAK LANJUT -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label class="block font-bold text-slate-700 mb-1">1. Kendala / Ketidaksesuaian yang Ditemukan</label>
-                  <textarea id="sopKendala" rows="3" placeholder="Tuliskan kendala pemilahan sampah di lapangan jika ada..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none"></textarea>
-                </div>
-                <div>
-                  <label class="block font-bold text-slate-700 mb-1">2. Umpan Balik / Rencana Tindak Lanjut Perbaikan</label>
-                  <textarea id="sopTindakLanjut" rows="3" placeholder="Tuliskan edukasi langsung / tindakan perbaikan..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none"></textarea>
-                </div>
-              </div>
-
-              <div class="flex flex-wrap justify-end gap-3 pt-2 no-print">
-                <button type="button" onclick="printSection('instrumenPrintArea')" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl transition flex items-center gap-1.5">
-                  <i class="fa-solid fa-print"></i> Cetak Form Instrumen
+              <!-- Action Buttons -->
+              <div class="flex flex-wrap justify-end gap-3 pt-4 border-t border-slate-200 no-print">
+                <button type="button" onclick="printSection('printInstrumenArea')" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition flex items-center gap-1.5">
+                  <i class="fa-solid fa-print"></i> Cetak Instrumen
                 </button>
-                <button type="submit" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-xl shadow-md shadow-blue-600/20 transition flex items-center gap-2">
-                  <i class="fa-solid fa-check-double"></i>
-                  <span>Simpan Hasil Monitoring ke Rekapitulasi</span>
+                <button type="submit" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-xl shadow-sm transition flex items-center gap-2">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Simpan Hasil Observasi</span>
                 </button>
               </div>
             </form>
@@ -791,146 +636,145 @@
         </section>
 
         <!-- =============================================================== -->
-        <!-- PAGE 5: REKAPITULASI KEPATUHAN SOP (MATRIKS 9 RUANGAN & LOG QR) -->
+        <!-- PAGE 3: REKAPITULASI PER RUANGAN & LOG INPUT QR CODE            -->
         <!-- =============================================================== -->
         <section id="page-rekap-sop" class="hidden space-y-6">
-          <!-- Sub-tab Navigation & Export Buttons -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <!-- Sub-tab Switcher & Export Buttons -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 no-print">
             <div class="flex flex-wrap gap-2">
-              <button id="subtab-matrix" onclick="switchSopSubTab('matrix')" class="px-4 py-2 rounded-xl text-xs font-bold bg-navy-900 text-white shadow-sm transition">
-                <i class="fa-solid fa-table mr-1.5"></i> Matriks Rekapitulasi 9 Ruangan (10 Indikator)
+              <button id="subtab-matrix" onclick="switchSopSubTab('matrix')" class="px-4 py-2 rounded-xl text-xs font-bold bg-navy-900 text-white shadow-xs transition">
+                <i class="fa-solid fa-table mr-1.5"></i> Rekapitulasi Per Ruangan (9 Unit)
               </button>
               <button id="subtab-logs" onclick="switchSopSubTab('logs')" class="px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition">
-                <i class="fa-solid fa-qrcode mr-1.5"></i> Log Input QR Code & Tindak Lanjut
+                <i class="fa-solid fa-qrcode mr-1.5"></i> Log Input QR Code (10 Ind)
               </button>
             </div>
-            <div class="flex gap-2">
-              <button onclick="exportSopExcelCsv()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
+
+            <div class="flex flex-wrap gap-2">
+              <button onclick="exportSopExcelCsv()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition flex items-center gap-1.5">
                 <i class="fa-solid fa-file-excel"></i> Ekspor Excel / CSV
               </button>
-              <button onclick="printSection('sopMatrixPrintArea')" class="px-3.5 py-2 bg-navy-900 hover:bg-navy-800 text-white text-xs font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
-                <i class="fa-solid fa-print"></i> Cetak Rekap SOP
+              <button onclick="printSection('printRekapSopArea')" class="px-3.5 py-2 bg-navy-900 hover:bg-navy-800 text-white text-xs font-bold rounded-xl transition flex items-center gap-1.5">
+                <i class="fa-solid fa-print"></i> Cetak Rekapitulasi
               </button>
             </div>
           </div>
 
-          <!-- SUB-TAB 1: MATRIKS 9 RUANGAN X 10 INDIKATOR -->
-          <div id="sopSub-matrix" class="space-y-6">
-            <div id="sopMatrixPrintArea" class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden p-5 sm:p-6 space-y-4">
-              <div>
-                <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-amber-50 text-amber-800 rounded-md border border-amber-200">Rekapitulasi Monitoring Kepatuhan SOP</span>
-                <h3 class="text-base sm:text-lg font-extrabold text-slate-900 mt-1">Matriks Penilaian Kepatuhan Pemilahan Sampah Medis (9 Unit Pelayanan)</h3>
-                <p class="text-xs text-slate-500">Skor 1 = Patuh SOP, Skor 0 = Tidak Patuh SOP • UPTD Puskesmas Non Rawat Inap Mandrehe Utara</p>
+          <div id="printRekapSopArea" class="space-y-6">
+            <!-- SUB-TAB 1: MATRIKS 9 RUANGAN X 10 INDIKATOR -->
+            <div id="sopSub-matrix" class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+              <div class="p-5 border-b border-slate-200 bg-slate-50/70">
+                <h3 class="font-extrabold text-slate-900 text-base">Rekapitulasi Monitoring Kepatuhan SOP Pemilahan Sampah Infeksius & Noninfeksius</h3>
+                <p class="text-xs text-slate-500">UPTD Puskesmas Non Rawat Inap Mandrehe Utara • Skor 1 = Patuh, Skor 0 = Tidak Patuh</p>
               </div>
 
               <div class="overflow-x-auto">
                 <table class="w-full text-left text-xs border-collapse">
-                  <thead class="bg-navy-900 text-white font-bold text-[11px]">
+                  <thead class="bg-navy-900 text-white text-[11px] uppercase">
                     <tr>
-                      <th rowspan="2" class="py-2.5 px-3 border border-slate-600 text-center">No</th>
-                      <th rowspan="2" class="py-2.5 px-3.5 border border-slate-600 min-w-[200px]">Ruangan / Unit Pelayanan</th>
-                      <th colspan="10" class="py-2 px-2 border border-slate-600 text-center bg-navy-800">Skor Indikator Kepatuhan SOP (1 s.d. 10)</th>
-                      <th rowspan="2" class="py-2.5 px-3 border border-slate-600 text-center">Skor</th>
-                      <th rowspan="2" class="py-2.5 px-3 border border-slate-600 text-center">Maks</th>
-                      <th rowspan="2" class="py-2.5 px-3 border border-slate-600 text-center">% Capaian</th>
-                      <th rowspan="2" class="py-2.5 px-3.5 border border-slate-600 text-center min-w-[140px]">Kategori Kepatuhan</th>
+                      <th rowspan="2" class="py-2.5 px-3 border border-slate-700 text-center">No</th>
+                      <th rowspan="2" class="py-2.5 px-3.5 border border-slate-700">Ruangan / Unit Pelayanan</th>
+                      <th colspan="10" class="py-2 px-2 border border-slate-700 text-center bg-navy-800">Indikator Kepatuhan SOP (1 s.d. 10)</th>
+                      <th rowspan="2" class="py-2.5 px-3 border border-slate-700 text-center">Skor</th>
+                      <th rowspan="2" class="py-2.5 px-3 border border-slate-700 text-center">Maks</th>
+                      <th rowspan="2" class="py-2.5 px-3 border border-slate-700 text-center">% Kepatuhan</th>
+                      <th rowspan="2" class="py-2.5 px-3.5 border border-slate-700 text-center">Kategori</th>
                     </tr>
-                    <tr class="bg-navy-800 text-center text-[10px]">
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.1</th>
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.2</th>
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.3</th>
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.4</th>
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.5</th>
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.6</th>
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.7</th>
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.8</th>
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.9</th>
-                      <th class="py-1.5 px-2 border border-slate-600">Ind.10</th>
+                    <tr class="bg-navy-800 text-[10px]">
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">1</th>
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">2</th>
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">3</th>
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">4</th>
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">5</th>
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">6</th>
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">7</th>
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">8</th>
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">9</th>
+                      <th class="py-1.5 px-2 border border-slate-700 text-center">10</th>
                     </tr>
                   </thead>
-                  <tbody id="tbodySopMatrix" class="font-medium text-slate-700">
-                    <!-- Populated by JS -->
+                  <tbody id="tbodySopMatrix" class="divide-y divide-slate-200 font-medium text-slate-700">
+                    <!-- Populated via JS -->
                   </tbody>
                   <tfoot id="tfootSopMatrix" class="bg-slate-100 font-extrabold text-xs">
-                    <!-- Populated by JS -->
+                    <!-- Populated via JS -->
                   </tfoot>
                 </table>
               </div>
 
-              <!-- Keterangan 10 Indikator -->
-              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-[11px] text-slate-600 space-y-2">
-                <p class="font-extrabold text-navy-900 uppercase">Keterangan 10 Indikator Kepatuhan SOP Pemilahan Sampah:</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1">
-                  <p><strong>Ind. 1:</strong> Pemilahan awal langsung di sumber penghasil</p>
-                  <p><strong>Ind. 6:</strong> Pembuangan benda tajam ke Safety Box (tanpa recapping 2 tangan)</p>
-                  <p><strong>Ind. 2:</strong> Pembuangan sampah infeksius tepat ke kantong kuning</p>
-                  <p><strong>Ind. 7:</strong> Pembuangan limbah cair/spesimen ke saluran terhubung IPAL</p>
-                  <p><strong>Ind. 3:</strong> Pembuangan sampah noninfeksius/domestik ke kantong hitam</p>
-                  <p><strong>Ind. 8:</strong> Pengendalian kapasitas wadah maksimal &le; 3/4 (75%)</p>
-                  <p><strong>Ind. 4:</strong> Tidak mencampur sampah domestik ke kantong kuning</p>
-                  <p><strong>Ind. 9:</strong> Menutup kembali wadah sampah dengan rapat setelah membuang</p>
-                  <p><strong>Ind. 5:</strong> Tidak mencampur limbah infeksius ke kantong hitam</p>
-                  <p><strong>Ind. 10:</strong> Kepatuhan kebersihan tangan (Hand Hygiene) pasca penanganan</p>
+              <!-- Keterangan 10 Indikator di bawah tabel -->
+              <div class="p-5 bg-slate-50 border-t border-slate-200 grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] text-slate-600">
+                <div><strong>Ind. 1:</strong> Pemilahan Awal di Sumber</div>
+                <div><strong>Ind. 6:</strong> Pembuangan Limbah Benda Tajam (Safety Box)</div>
+                <div><strong>Ind. 2:</strong> Pembuangan Sampah Infeksius (Kantong Kuning)</div>
+                <div><strong>Ind. 7:</strong> Pembuangan Limbah Cair / Spesimen ke IPAL</div>
+                <div><strong>Ind. 3:</strong> Pembuangan Sampah Noninfeksius (Kantong Hitam)</div>
+                <div><strong>Ind. 8:</strong> Pengendalian Kapasitas Wadah (≤ 3/4)</div>
+                <div><strong>Ind. 4:</strong> Tidak Mencampur Sampah Domestik ke Kantong Kuning</div>
+                <div><strong>Ind. 9:</strong> Menutup Kembali Wadah Sampah Rapat</div>
+                <div><strong>Ind. 5:</strong> Tidak Mencampur Limbah Infeksius ke Kantong Hitam</div>
+                <div><strong>Ind. 10:</strong> Kepatuhan Kebersihan Tangan (Hand Hygiene)</div>
+              </div>
+            </div>
+
+            <!-- SUB-TAB 2: LOG INPUT QR CODE -->
+            <div id="sopSub-logs" class="hidden bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+              <div class="p-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-50/70">
+                <div>
+                  <h3 class="font-extrabold text-slate-900 text-base">Riwayat Log Input Evaluasi QR Code (10 Indikator)</h3>
+                  <p class="text-xs text-slate-500">Catatan hasil observasi lapangan beserta temuan & tindak lanjut</p>
                 </div>
+                <select id="filterLogRuangan" onchange="renderSopLogsTable()" class="no-print text-xs px-3 py-2 bg-white border border-slate-200 rounded-xl font-semibold text-slate-700 focus:outline-none">
+                  <option value="">Semua Unit Pelayanan (9 Ruangan)</option>
+                  <option value="Ruang Pendaftaran & Rekam Medis">Ruang Pendaftaran & Rekam Medis</option>
+                  <option value="Ruang Pemeriksaan Umum (Poli Umum)">Ruang Pemeriksaan Umum (Poli Umum)</option>
+                  <option value="Ruang Kesehatan Ibu dan Anak (KIA / KB)">Ruang Kesehatan Ibu dan Anak (KIA / KB)</option>
+                  <option value="Ruang Kesehatan Gigi dan Mulut (Poli Gigi)">Ruang Kesehatan Gigi dan Mulut (Poli Gigi)</option>
+                  <option value="Ruang Tindakan / UGD">Ruang Tindakan / UGD</option>
+                  <option value="Ruang Laboratorium">Ruang Laboratorium</option>
+                  <option value="Ruang Farmasi / Obat">Ruang Farmasi / Obat</option>
+                  <option value="Ruang Imunisasi / Gizi / Konseling">Ruang Imunisasi / Gizi / Konseling</option>
+                  <option value="Ruang Administrasi / Manajemen">Ruang Administrasi / Manajemen</option>
+                </select>
               </div>
-            </div>
-          </div>
 
-          <!-- SUB-TAB 2: LOG INPUT QR CODE & TINDAK LANJUT -->
-          <div id="sopSub-logs" class="hidden bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
-            <div class="p-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-50/60">
-              <div>
-                <h3 class="font-extrabold text-slate-900 text-sm sm:text-base">Riwayat Log Input Observasi QR Code & Rencana Tindak Lanjut</h3>
-                <p class="text-xs text-slate-500">Rekaman waktu observasi lapangan, temuan ketidaksesuaian, dan umpan balik perbaikan</p>
+              <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs">
+                  <thead class="bg-slate-100 text-slate-700 uppercase font-extrabold text-[11px] border-b border-slate-200">
+                    <tr>
+                      <th class="py-3 px-3.5">Waktu & Jam Observasi</th>
+                      <th class="py-3 px-3.5">Petugas Pemantau</th>
+                      <th class="py-3 px-3.5">Ruangan / Unit</th>
+                      <th class="py-3 px-3 text-center">Skor</th>
+                      <th class="py-3 px-3 text-center">% Capaian</th>
+                      <th class="py-3 px-3 text-center">Kategori</th>
+                      <th class="py-3 px-3.5">Temuan & Tindak Lanjut</th>
+                      <th class="py-3 px-3 text-center no-print">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbodySopLogs" class="divide-y divide-slate-100 font-medium text-slate-700">
+                    <!-- Populated via JS -->
+                  </tbody>
+                </table>
               </div>
-              <select id="filterLogRuangan" onchange="renderSopLogsTable()" class="px-3 py-2 text-xs bg-white border border-slate-200 rounded-xl font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                <option value="">Semua Unit Pelayanan (9 Ruangan)</option>
-                <option value="Ruang Pendaftaran & Rekam Medis">Ruang Pendaftaran & Rekam Medis</option>
-                <option value="Ruang Pemeriksaan Umum (Poli Umum)">Ruang Pemeriksaan Umum (Poli Umum)</option>
-                <option value="Ruang Kesehatan Ibu dan Anak (KIA / KB)">Ruang Kesehatan Ibu dan Anak (KIA / KB)</option>
-                <option value="Ruang Kesehatan Gigi dan Mulut (Poli Gigi)">Ruang Kesehatan Gigi dan Mulut (Poli Gigi)</option>
-                <option value="Ruang Tindakan / UGD">Ruang Tindakan / UGD</option>
-                <option value="Ruang Laboratorium">Ruang Laboratorium</option>
-                <option value="Ruang Farmasi / Obat">Ruang Farmasi / Obat</option>
-                <option value="Ruang Imunisasi / Gizi / Konseling">Ruang Imunisasi / Gizi / Konseling</option>
-                <option value="Ruang Administrasi / Manajemen">Ruang Administrasi / Manajemen</option>
-              </select>
-            </div>
-
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs border-collapse">
-                <thead class="bg-slate-100 text-slate-700 font-extrabold uppercase text-[11px] border-b border-slate-200">
-                  <tr>
-                    <th class="py-3 px-3.5">Waktu Observasi</th>
-                    <th class="py-3 px-3.5">Petugas Pemantau</th>
-                    <th class="py-3 px-3.5">Ruangan / Unit</th>
-                    <th class="py-3 px-3 text-center">Skor</th>
-                    <th class="py-3 px-3 text-center">Persentase</th>
-                    <th class="py-3 px-3 text-center">Kategori</th>
-                    <th class="py-3 px-3.5">Temuan & Rencana Tindak Lanjut</th>
-                  </tr>
-                </thead>
-                <tbody id="tbodySopLogs" class="divide-y divide-slate-100 font-medium text-slate-700">
-                  <!-- Populated by JS -->
-                </tbody>
-              </table>
             </div>
           </div>
         </section>
 
         <!-- =============================================================== -->
-        <!-- PAGE 6: PENGATURAN AKUN (TANPA LIST AKUN / HINT PASSWORD)       -->
+        <!-- PAGE 4: PENGATURAN AKUN & RESET DATA SIMULASI                   -->
         <!-- =============================================================== -->
-        <section id="page-pengaturan-akun" class="hidden space-y-6">
-          <div class="max-w-xl mx-auto">
-            <div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+        <section id="page-pengaturan" class="hidden space-y-6">
+          <div class="max-w-xl mx-auto space-y-6">
+            <!-- Ubah Password -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
               <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
                 <div class="w-10 h-10 rounded-xl bg-navy-900 text-white flex items-center justify-center text-base">
                   <i class="fa-solid fa-key"></i>
                 </div>
                 <div>
                   <h3 class="font-extrabold text-slate-900 text-base">Ubah Password Akun Petugas</h3>
-                  <p class="text-xs text-slate-500">Perubahan password tersimpan di perangkat dan berlaku untuk sesi login berikutnya</p>
+                  <p class="text-xs text-slate-500">Perubahan password langsung tersimpan untuk sesi login berikutnya</p>
                 </div>
               </div>
 
@@ -938,7 +782,7 @@
 
               <form onsubmit="handleChangePassword(event)" class="space-y-4 text-xs">
                 <div>
-                  <label class="block font-bold text-slate-700 mb-1">Username Aktif Saat Ini</label>
+                  <label class="block font-bold text-slate-700 mb-1">Username Aktif</label>
                   <input type="text" id="settingCurrentUsername" readonly class="w-full px-3.5 py-2.5 bg-slate-100 border border-slate-200 rounded-xl font-mono font-bold text-slate-700">
                 </div>
                 <div>
@@ -953,10 +797,21 @@
                   <label class="block font-bold text-slate-700 mb-1">Konfirmasi Password Baru <span class="text-rose-500">*</span></label>
                   <input type="password" id="settingConfirmPwd" minlength="5" required placeholder="Ulangi password baru..." class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:outline-none">
                 </div>
-                <button type="submit" class="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-xl shadow-sm transition">
+                <button type="submit" class="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-xs transition">
                   Simpan Password Baru
                 </button>
               </form>
+            </div>
+
+            <!-- Reset Data Simulasi -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-sm">Reset Data Monitoring ke Kondisi Awal</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Mengembalikan skor 9 ruangan dan log observasi ke data awal default.</p>
+              </div>
+              <button type="button" onclick="resetSimulationData()" class="px-4 py-2.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-extrabold rounded-xl transition shrink-0">
+                <i class="fa-solid fa-rotate-left mr-1"></i> Reset Data
+              </button>
             </div>
           </div>
         </section>
@@ -965,7 +820,7 @@
 
       <!-- FOOTER -->
       <footer class="bg-white border-t border-slate-200 py-4 px-6 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2 no-print">
-        <p><strong class="text-navy-900">SIRAPI</strong> — Data Akurat, Laporan Cepat, STBM & Sanitasi Maju</p>
+        <p><strong class="text-navy-900">SIPATUH</strong> — Optimalisasi Kepatuhan Petugas dalam Pemilahan Sampah Infeksius dan Noninfeksius</p>
         <p>UPTD Puskesmas Non Rawat Inap Mandrehe Utara • Kab. Nias Barat</p>
       </footer>
 
@@ -973,7 +828,7 @@
   </div>
 
   <!-- TOAST NOTIFICATION -->
-  <div id="toastAlert" class="hidden fixed bottom-5 right-5 z-50 bg-navy-900 text-white px-4 py-3 rounded-2xl shadow-xl border border-white/10 flex items-center gap-3 text-xs font-semibold no-print">
+  <div id="toastAlert" class="hidden fixed bottom-5 right-5 z-50 bg-navy-900 text-white px-4 py-3 rounded-2xl shadow-xl border border-white/10 flex items-center gap-3 text-xs font-semibold">
     <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
     <span id="toastMessage">Data berhasil disimpan!</span>
   </div>
@@ -997,31 +852,28 @@
 
     function getRegisteredUsers() {
       try {
-        const saved = localStorage.getItem('sirapi_users_db');
+        const saved = localStorage.getItem('sipatuh_users_db');
         if (saved) {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length === 1 && parsed[0].username === "libertin") {
             return parsed;
           }
         }
-        localStorage.setItem('sirapi_users_db', JSON.stringify(DEFAULT_USERS));
-      } catch (e) {
-        // Fallback jika storage diblokir oleh sandbox browser
-      }
+        localStorage.setItem('sipatuh_users_db', JSON.stringify(DEFAULT_USERS));
+      } catch (e) {}
       return DEFAULT_USERS;
     }
 
     function saveRegisteredUsers(users) {
       try {
-        localStorage.setItem('sirapi_users_db', JSON.stringify(users));
+        localStorage.setItem('sipatuh_users_db', JSON.stringify(users));
       } catch (e) {}
     }
 
     function getActiveUserSession() {
       try {
-        const raw = sessionStorage.getItem('sirapi_active_user');
-        if (!raw) return null;
-        return JSON.parse(raw);
+        const raw = sessionStorage.getItem('sipatuh_active_user');
+        return raw ? JSON.parse(raw) : null;
       } catch (e) {
         return null;
       }
@@ -1059,34 +911,28 @@
 
       errorBox.classList.add('hidden');
       try {
-        sessionStorage.setItem('sirapi_active_user', JSON.stringify(matchedUser));
+        sessionStorage.setItem('sipatuh_active_user', JSON.stringify(matchedUser));
       } catch (err) {}
       applyAuthenticatedUserUI(matchedUser);
-      showToast("Login berhasil! Selamat datang, " + matchedUser.fullName);
+      showToast(`Login berhasil! Selamat datang, ${matchedUser.fullName}`);
     }
 
     function applyAuthenticatedUserUI(user) {
       document.getElementById('loginScreen').classList.add('hidden');
       document.getElementById('appShell').classList.remove('hidden');
 
-      const topHeader = document.getElementById('topGreetingHeader');
-      const userNameEl = document.getElementById('headerUserName');
-      const userRoleEl = document.getElementById('headerUserRole');
-      const userInitEl = document.getElementById('headerUserInitials');
-      const settingUserEl = document.getElementById('settingCurrentUsername');
+      document.getElementById('topGreetingHeader').innerText = `Halo, ${user.fullName}!`;
+      document.getElementById('headerUserName').innerText = user.fullName;
+      document.getElementById('headerUserRole').innerText = user.role;
+      document.getElementById('headerUserInitials').innerText = user.initials;
+      document.getElementById('settingCurrentUsername').value = user.username;
 
-      if (topHeader) topHeader.innerText = "Halo, " + user.fullName + "!";
-      if (userNameEl) userNameEl.innerText = user.fullName;
-      if (userRoleEl) userRoleEl.innerText = user.role;
-      if (userInitEl) userInitEl.innerText = user.initials;
-      if (settingUserEl) settingUserEl.value = user.username;
-
-      setTimeout(function() { refreshAllViews(); }, 60);
+      setTimeout(() => refreshAllViews(), 60);
     }
 
     function handleLogout() {
       try {
-        sessionStorage.removeItem('sirapi_active_user');
+        sessionStorage.removeItem('sipatuh_active_user');
       } catch (e) {}
       document.getElementById('loginForm').reset();
       document.getElementById('loginErrorBox').classList.add('hidden');
@@ -1109,7 +955,9 @@
 
     function handleChangePassword(e) {
       e.preventDefault();
-      const activeUser = getActiveUserSession() || DEFAULT_USERS[0];
+      const activeUser = getActiveUserSession();
+      if (!activeUser) return;
+
       const oldPwd = document.getElementById('settingOldPwd').value;
       const newPwd = document.getElementById('settingNewPwd').value;
       const confirmPwd = document.getElementById('settingConfirmPwd').value;
@@ -1135,7 +983,7 @@
       users[userIndex].password = newPwd;
       saveRegisteredUsers(users);
       try {
-        sessionStorage.setItem('sirapi_active_user', JSON.stringify(users[userIndex]));
+        sessionStorage.setItem('sipatuh_active_user', JSON.stringify(users[userIndex]));
       } catch (err) {}
 
       alertBox.className = "p-3 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200";
@@ -1147,25 +995,7 @@
     }
 
     // ---------------------------------------------------------------------
-    // 2. DATA 12 DESA STBM MANDREHE UTARA
-    // ---------------------------------------------------------------------
-    let stbmDesaData = [
-      { no: 1, desa: "Hilimbuasi", petugas: "Bidan Desi Hia", kk: 420, p1: 86, p2: 78, p3: 82, p4: 79, p5: 76 },
-      { no: 2, desa: "Lahagu", petugas: "Libertin R. Waruwu, S.K.M.", kk: 465, p1: 89, p2: 81, p3: 84, p4: 80, p5: 78 },
-      { no: 3, desa: "Lologundre", petugas: "Bidan Rina Halawa", kk: 450, p1: 88, p2: 80, p3: 83, p4: 78, p5: 76 },
-      { no: 4, desa: "Ononamolo I", petugas: "Bidan Yanti Daeli", kk: 390, p1: 84, p2: 76, p3: 79, p4: 75, p5: 73 },
-      { no: 5, desa: "Taraha", petugas: "Bidan Sari Gulo", kk: 375, p1: 82, p2: 74, p3: 78, p4: 73, p5: 71 },
-      { no: 6, desa: "Balodano", petugas: "Bidan Nia Zai", kk: 410, p1: 83, p2: 75, p3: 79, p4: 74, p5: 72 },
-      { no: 7, desa: "Hilisangawola", petugas: "Bidan Mei Lase", kk: 365, p1: 85, p2: 77, p3: 80, p4: 76, p5: 74 },
-      { no: 8, desa: "Sihareo", petugas: "Bidan Fitri Lahagu", kk: 415, p1: 87, p2: 79, p3: 81, p4: 77, p5: 75 },
-      { no: 9, desa: "Tarahoso", petugas: "Bidan Eka Waruwu", kk: 350, p1: 81, p2: 73, p3: 77, p4: 72, p5: 70 },
-      { no: 10, desa: "Onolimbu Raya", petugas: "Bidan Putri Hia", kk: 430, p1: 88, p2: 80, p3: 82, p4: 79, p5: 77 },
-      { no: 11, desa: "Hiliwalo'o", petugas: "Bidan Dina Gulo", kk: 360, p1: 83, p2: 75, p3: 78, p4: 74, p5: 72 },
-      { no: 12, desa: "Mazingo", petugas: "Bidan Lina Daeli", kk: 390, p1: 86, p2: 78, p3: 80, p4: 76, p5: 75 }
-    ];
-
-    // ---------------------------------------------------------------------
-    // 3. DATA 10 INDIKATOR SOP & 9 RUANGAN
+    // 2. DATA 10 INDIKATOR SOP & 9 RUANGAN PELAYANAN
     // ---------------------------------------------------------------------
     const sopIndicatorsList = [
       { no: 1, title: "Pemilahan Awal di Sumber", desc: "Petugas langsung memilah sampah sejak pertama kali dihasilkan pada setiap tindakan pelayanan (tidak menumpuk atau menunda pemilahan)." },
@@ -1175,12 +1005,12 @@
       { no: 5, title: "Tidak Mencampur Sampah ke Kantong Hitam", desc: "Petugas tidak membuang limbah infeksius ke dalam tempat sampah noninfeksius (kantong hitam)." },
       { no: 6, title: "Pembuangan Limbah Benda Tajam", desc: "Petugas membuang jarum suntik, spuit, bisturi, atau ampul pecah langsung ke dalam Safety Box (tidak dicampur ke kantong plastik dan tidak melakukan recapping dua tangan)." },
       { no: 7, title: "Pembuangan Limbah Cair / Spesimen", desc: "Petugas membuang sisa cairan tubuh/spesimen klinis ke saluran pembuangan khusus yang terhubung ke IPAL sesuai ketentuan SOP." },
-      { no: 8, title: "Pengendalian Kapasitas Wadah (\u2264 3/4)", desc: "Petugas memastikan pengikatan/penggantian kantong sampah dilakukan saat volume mencapai maksimal 3/4 (75%) dan tidak membiarkan sampah meluap." },
+      { no: 8, title: "Pengendalian Kapasitas Wadah (≤ 3/4)", desc: "Petugas memastikan pengikatan/penggantian kantong sampah dilakukan saat volume mencapai maksimal 3/4 (75%) dan tidak membiarkan sampah meluap." },
       { no: 9, title: "Menutup Kembali Wadah Sampah", desc: "Petugas menutup kembali wadah sampah dengan rapat setelah membuang sampah untuk mencegah vektor penyakit dan bau." },
       { no: 10, title: "Kepatuhan Kebersihan Tangan (Hand Hygiene)", desc: "Petugas melakukan cuci tangan dengan sabun/air mengalir atau memakai handrub setelah menangani/membuang sampah medis." }
     ];
 
-    let sopRuanganData = [
+    const INITIAL_RUANGAN_DATA = [
       { no: 1, ruangan: "Ruang Pendaftaran & Rekam Medis", scores: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] },
       { no: 2, ruangan: "Ruang Pemeriksaan Umum (Poli Umum)", scores: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] },
       { no: 3, ruangan: "Ruang Kesehatan Ibu dan Anak (KIA / KB)", scores: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] },
@@ -1192,65 +1022,67 @@
       { no: 9, ruangan: "Ruang Administrasi / Manajemen", scores: [1, 1, 1, 1, 1, 1, 1, 0, 0, 1] }
     ];
 
-    let sopObservationLogs = [
-      { timestamp: "2026-12-05 09:15", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Tindakan / UGD", skor: 9, persen: 90, kategori: "PATUH (Baik)", kendala: "Kapasitas kantong kuning sempat mencapai >75% saat jam sibuk", tindakLanjut: "Edukasi langsung petugas untuk segera mengikat kantong saat 3/4 penuh" },
-      { timestamp: "2026-12-04 10:10", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Laboratorium", skor: 9, persen: 90, kategori: "PATUH (Baik)", kendala: "Penutup tempat sampah pedal sempat kurang rapat", tindakLanjut: "Perbaikan engsel penutup wadah dan briefing staf lab" },
-      { timestamp: "2026-12-02 09:40", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Imunisasi / Gizi / Konseling", skor: 9, persen: 90, kategori: "PATUH (Baik)", kendala: "Ditemukan 1 plastik kemasan noninfeksius di kantong kuning", tindakLanjut: "Pemindahan segera ke kantong hitam dan penguatan label warna" },
-      { timestamp: "2026-11-28 11:05", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Pemeriksaan Umum (Poli Umum)", skor: 10, persen: 100, kategori: "PATUH (Baik)", kendala: "Tidak ada kendala, seluruh 10 indikator dipatuhi", tindakLanjut: "Pertahankan kepatuhan dan kebersihan tangan" },
-      { timestamp: "2026-11-20 10:25", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Administrasi / Manajemen", skor: 8, persen: 80, kategori: "PATUH (Baik)", kendala: "Wadah sampah kertas penuh dan penutup terbuka", tindakLanjut: "Pengosongan rutin harian oleh petugas kebersihan" }
+    const INITIAL_LOGS_DATA = [
+      { id: 101, tanggal: "2026-11-25", jam: "09:15 WIB s.d. 09:40 WIB", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Tindakan / UGD", skor: 9, persen: 90, kategori: "PATUH (Baik)", kendala: "Kapasitas kantong kuning sempat mencapai >75% saat jam sibuk", tindakLanjut: "Edukasi langsung petugas untuk segera mengikat kantong saat 3/4 penuh" },
+      { id: 102, tanggal: "2026-11-24", jam: "10:10 WIB s.d. 10:35 WIB", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Laboratorium", skor: 9, persen: 90, kategori: "PATUH (Baik)", kendala: "Penutup tempat sampah pedal sempat kurang rapat", tindakLanjut: "Perbaikan engsel penutup wadah dan briefing staf lab" },
+      { id: 103, tanggal: "2026-11-22", jam: "09:40 WIB s.d. 10:05 WIB", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Imunisasi / Gizi / Konseling", skor: 9, persen: 90, kategori: "PATUH (Baik)", kendala: "Ditemukan 1 plastik kemasan noninfeksius di kantong kuning", tindakLanjut: "Pemindahan segera ke kantong hitam dan penguatan label warna" },
+      { id: 104, tanggal: "2026-11-18", jam: "11:05 WIB s.d. 11:30 WIB", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Pemeriksaan Umum (Poli Umum)", skor: 10, persen: 100, kategori: "PATUH (Baik)", kendala: "Tidak ada kendala, seluruh 10 indikator dipatuhi", tindakLanjut: "Pertahankan kepatuhan dan kebersihan tangan" },
+      { id: 105, tanggal: "2026-11-12", jam: "10:25 WIB s.d. 10:50 WIB", pemantau: "Libertin Riniati Waruwu, S.K.M.", ruangan: "Ruang Administrasi / Manajemen", skor: 8, persen: 80, kategori: "PATUH (Baik)", kendala: "Wadah sampah kertas penuh dan penutup terbuka", tindakLanjut: "Pengosongan rutin harian oleh petugas kebersihan" }
     ];
 
-    let dashTrendChart = null;
-    let dashDoughnut5Pilar = null;
+    let sopRuanganData = JSON.parse(JSON.stringify(INITIAL_RUANGAN_DATA));
+    let sopObservationLogs = JSON.parse(JSON.stringify(INITIAL_LOGS_DATA));
+
+    // Chart instances
     let dashBarRuanganChart = null;
-    let stbmDesaBarChart = null;
+    let dashDoughnutKategori = null;
+    let dashBarIndikatorChart = null;
 
     // ---------------------------------------------------------------------
-    // 4. INITIALIZATION ON PAGE LOAD
+    // 3. INITIALIZATION ON PAGE LOAD
     // ---------------------------------------------------------------------
-    window.addEventListener('DOMContentLoaded', function() {
-      const today = new Date().toISOString().slice(0, 10);
-      const stbmTgl = document.getElementById('stbmTanggal');
-      const sopTgl = document.getElementById('sopTanggal');
-      if (stbmTgl) stbmTgl.value = today;
-      if (sopTgl) sopTgl.value = today;
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        const today = new Date().toISOString().slice(0, 10);
+        const sopTgl = document.getElementById('sopTanggal');
+        if (sopTgl) sopTgl.value = today;
 
-      renderChecklistSop();
-      renderStbmDesaTable();
-      renderSopMatrixTable();
-      renderSopLogsTable();
-      updateKpiCards();
-      initCharts();
+        renderChecklistSop();
+        renderSopMatrixTable();
+        renderSopLogsTable();
+        updateKpiAndRoomCards();
+        initCharts();
 
-      const activeUser = getActiveUserSession();
-      if (activeUser) {
-        applyAuthenticatedUserUI(activeUser);
-      } else {
-        document.getElementById('loginScreen').classList.remove('hidden');
-        document.getElementById('appShell').classList.add('hidden');
+        const activeUser = getActiveUserSession();
+        if (activeUser) {
+          applyAuthenticatedUserUI(activeUser);
+        } else {
+          document.getElementById('loginScreen').classList.remove('hidden');
+          document.getElementById('appShell').classList.add('hidden');
+        }
+      } catch (err) {
+        console.error("Initialization error:", err);
       }
     });
 
     // ---------------------------------------------------------------------
-    // 5. NAVIGATION & UI HELPERS
+    // 4. NAVIGATION & UI HELPERS
     // ---------------------------------------------------------------------
     function switchPage(pageId) {
-      const pages = ['dashboard', 'input-stbm', 'rekap-stbm', 'instrumen-sop', 'rekap-sop', 'pengaturan-akun'];
+      const pages = ['dashboard', 'instrumen-sop', 'rekap-sop', 'pengaturan'];
       const activeUser = getActiveUserSession();
-      const userName = activeUser ? activeUser.fullName : 'Petugas STBM';
+      const userName = activeUser ? activeUser.fullName : 'Petugas Kesling';
 
       const titles = {
-        'dashboard': "Halo, " + userName + "!",
-        'input-stbm': 'Input Data Pelaporan 5 Pilar STBM',
-        'rekap-stbm': 'Rekapitulasi 5 Pilar STBM (12 Desa)',
+        'dashboard': `Halo, ${userName}!`,
         'instrumen-sop': 'Instrumen Monitoring Kepatuhan SOP Pemilahan Sampah',
-        'rekap-sop': 'Rekapitulasi Kepatuhan SOP & Log QR Code',
-        'pengaturan-akun': 'Pengaturan Akun & Password Petugas'
+        'rekap-sop': 'Rekapitulasi Kepatuhan Ruangan & Log Input QR Code',
+        'pengaturan': 'Pengaturan Akun & Data Sistem'
       };
 
-      pages.forEach(function(p) {
-        const section = document.getElementById('page-' + p);
-        const btn = document.getElementById('nav-' + p);
+      pages.forEach(p => {
+        const section = document.getElementById(`page-${p}`);
+        const btn = document.getElementById(`nav-${p}`);
         if (!section || !btn) return;
         if (p === pageId) {
           section.classList.remove('hidden');
@@ -1262,18 +1094,17 @@
       });
 
       const headerTitle = document.getElementById('topGreetingHeader');
-      if (headerTitle) headerTitle.innerText = titles[pageId] || 'SIRAPI Dashboard';
+      if (headerTitle) headerTitle.innerText = titles[pageId] || 'SIPATUH Dashboard';
 
       const sb = document.getElementById('sidebar');
       const ov = document.getElementById('sidebarOverlay');
       if (sb) sb.classList.add('-translate-x-full');
       if (ov) ov.classList.add('hidden');
 
-      setTimeout(function() {
-        if (dashTrendChart) dashTrendChart.resize();
-        if (dashDoughnut5Pilar) dashDoughnut5Pilar.resize();
+      setTimeout(() => {
         if (dashBarRuanganChart) dashBarRuanganChart.resize();
-        if (stbmDesaBarChart) stbmDesaBarChart.resize();
+        if (dashDoughnutKategori) dashDoughnutKategori.resize();
+        if (dashBarIndikatorChart) dashBarIndikatorChart.resize();
       }, 60);
     }
 
@@ -1286,17 +1117,15 @@
 
     function showToast(msg) {
       const toast = document.getElementById('toastAlert');
-      const msgEl = document.getElementById('toastMessage');
-      if (!toast || !msgEl) return;
-      msgEl.innerText = msg;
+      const toastMsg = document.getElementById('toastMessage');
+      if (!toast || !toastMsg) return;
+      toastMsg.innerText = msg;
       toast.classList.remove('hidden');
-      setTimeout(function() { toast.classList.add('hidden'); }, 3500);
+      setTimeout(() => toast.classList.add('hidden'), 3500);
     }
 
     function printSection(elementId) {
-      document.querySelectorAll('.print-section').forEach(function(el) {
-        el.classList.remove('print-section');
-      });
+      document.querySelectorAll('.print-section').forEach(el => el.classList.remove('print-section'));
       const target = document.getElementById(elementId);
       if (target) {
         target.classList.add('print-section');
@@ -1304,48 +1133,61 @@
       }
     }
 
-    // ---------------------------------------------------------------------
-    // 6. KPI CALCULATIONS & CHARTS (SAFE CANVAS CHECKS)
-    // ---------------------------------------------------------------------
-    function getStbmAverages() {
-      const n = stbmDesaData.length;
-      let sumKK = 0, s1 = 0, s2 = 0, s3 = 0, s4 = 0, s5 = 0;
-      stbmDesaData.forEach(function(d) {
-        sumKK += d.kk;
-        s1 += d.p1; s2 += d.p2; s3 += d.p3; s4 += d.p4; s5 += d.p5;
-      });
-      const p1 = +(s1 / n).toFixed(1);
-      const p2 = +(s2 / n).toFixed(1);
-      const p3 = +(s3 / n).toFixed(1);
-      const p4 = +(s4 / n).toFixed(1);
-      const p5 = +(s5 / n).toFixed(1);
-      const avg = +((p1 + p2 + p3 + p4 + p5) / 5).toFixed(1);
-      return { sumKK: sumKK, p1: p1, p2: p2, p3: p3, p4: p4, p5: p5, avg: avg };
+    function resetSimulationData() {
+      sopRuanganData = JSON.parse(JSON.stringify(INITIAL_RUANGAN_DATA));
+      sopObservationLogs = JSON.parse(JSON.stringify(INITIAL_LOGS_DATA));
+      refreshAllViews();
+      showToast("Data monitoring berhasil dikembalikan ke kondisi awal.");
     }
 
+    // ---------------------------------------------------------------------
+    // 5. KPI CALCULATIONS, ROOM CARDS & CHARTS
+    // ---------------------------------------------------------------------
     function getSopOverallAverage() {
       let totalScore = 0;
-      sopRuanganData.forEach(function(r) {
-        totalScore += r.scores.reduce(function(a, b) { return a + b; }, 0);
+      sopRuanganData.forEach(r => {
+        totalScore += r.scores.reduce((a, b) => a + b, 0);
       });
       const maxScore = sopRuanganData.length * 10;
       return +((totalScore / maxScore) * 100).toFixed(1);
     }
 
-    function updateKpiCards() {
-      const stbm = getStbmAverages();
+    function getCategoryCounts() {
+      let patuh = 0, cukup = 0, kurang = 0;
+      sopRuanganData.forEach(r => {
+        const pct = (r.scores.reduce((a, b) => a + b, 0) / 10) * 100;
+        if (pct >= 80) patuh++;
+        else if (pct >= 60) cukup++;
+        else kurang++;
+      });
+      return { patuh, cukup, kurang };
+    }
+
+    function getIndicatorAverages() {
+      const totalRooms = sopRuanganData.length;
+      const averages = [];
+      for (let i = 0; i < 10; i++) {
+        let sumInd = 0;
+        sopRuanganData.forEach(r => { sumInd += r.scores[i]; });
+        averages.push(+((sumInd / totalRooms) * 100).toFixed(1));
+      }
+      return averages;
+    }
+
+    function updateKpiAndRoomCards() {
       const sopAvg = getSopOverallAverage();
+      const cats = getCategoryCounts();
 
-      const kpiTotalKK = document.getElementById('kpiTotalKK');
-      const kpiAvgStbm = document.getElementById('kpiAvgStbm');
-      const doughnutCenter = document.getElementById('doughnutCenterText');
-      const kpiAvgSop = document.getElementById('kpiAvgSop');
+      const kpiObs = document.getElementById('kpiTotalObs');
+      const kpiSop = document.getElementById('kpiAvgSop');
+      const centerText = document.getElementById('doughnutCenterText');
       const badge = document.getElementById('kpiBadgeSop');
+      const legContainer = document.getElementById('doughnutLegendList');
+      const roomGrid = document.getElementById('dashboardRoomCardsGrid');
 
-      if (kpiTotalKK) kpiTotalKK.innerText = stbm.sumKK.toLocaleString('id-ID');
-      if (kpiAvgStbm) kpiAvgStbm.innerText = stbm.avg.toString().replace('.', ',') + '%';
-      if (doughnutCenter) doughnutCenter.innerText = stbm.avg.toString().replace('.', ',') + '%';
-      if (kpiAvgSop) kpiAvgSop.innerText = sopAvg.toString().replace('.', ',') + '%';
+      if (kpiObs) kpiObs.innerText = sopObservationLogs.length;
+      if (kpiSop) kpiSop.innerText = sopAvg.toString().replace('.', ',') + '%';
+      if (centerText) centerText.innerText = sopAvg.toString().replace('.', ',') + '%';
 
       if (badge) {
         if (sopAvg >= 80) {
@@ -1360,81 +1202,91 @@
         }
       }
 
-      const legendItems = [
-        { label: "Pilar 1 (Stop BABS)", val: stbm.p1, color: "#2563eb" },
-        { label: "Pilar 2 (CTPS)", val: stbm.p2, color: "#0ea5e9" },
-        { label: "Pilar 3 (Air Minum & Makanan)", val: stbm.p3, color: "#10b981" },
-        { label: "Pilar 4 (Sampah RT)", val: stbm.p4, color: "#f59e0b" },
-        { label: "Pilar 5 (Limbah Cair / SPAL)", val: stbm.p5, color: "#8b5cf6" }
-      ];
-      const legContainer = document.getElementById('doughnutLegendList');
       if (legContainer) {
-        legContainer.innerHTML = legendItems.map(function(item) {
-          return '<div class="flex items-center justify-between py-1 border-b border-slate-100 last:border-0">' +
-            '<div class="flex items-center gap-2">' +
-            '<span class="w-2.5 h-2.5 rounded-full shrink-0" style="background:' + item.color + '"></span>' +
-            '<span class="text-slate-600 font-medium">' + item.label + '</span>' +
-            '</div>' +
-            '<span class="font-extrabold text-slate-900">' + item.val.toString().replace('.', ',') + '%</span>' +
-            '</div>';
+        const legendItems = [
+          { label: "PATUH (80% – 100%)", count: `${cats.patuh} Ruangan`, color: "#10b981" },
+          { label: "CUKUP PATUH (60% – 79%)", count: `${cats.cukup} Ruangan`, color: "#f59e0b" },
+          { label: "KURANG PATUH (< 60%)", count: `${cats.kurang} Ruangan`, color: "#ef4444" }
+        ];
+        legContainer.innerHTML = legendItems.map(item => `
+          <div class="flex items-center justify-between py-1.5 border-b border-slate-100 last:border-0">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full shrink-0" style="background:${item.color}"></span>
+              <span class="text-slate-600 font-medium">${item.label}</span>
+            </div>
+            <span class="font-extrabold text-slate-900">${item.count}</span>
+          </div>
+        `).join('');
+      }
+
+      if (roomGrid) {
+        roomGrid.innerHTML = sopRuanganData.map(r => {
+          const skor = r.scores.reduce((a, b) => a + b, 0);
+          const pct = (skor / 10) * 100;
+          const isPatuh = pct >= 80;
+          const isCukup = pct >= 60 && pct < 80;
+          const badgeCls = isPatuh ? "bg-emerald-100 text-emerald-800" : (isCukup ? "bg-amber-100 text-amber-800" : "bg-rose-100 text-rose-800");
+          const barCls = isPatuh ? "bg-emerald-500" : (isCukup ? "bg-amber-500" : "bg-rose-500");
+          const labelStatus = isPatuh ? "PATUH (Baik)" : (isCukup ? "CUKUP PATUH" : "KURANG PATUH");
+
+          return `
+            <div class="p-3.5 rounded-xl border border-slate-200/80 bg-slate-50/50 hover:bg-white transition space-y-2">
+              <div class="flex items-start justify-between gap-2">
+                <p class="text-xs font-extrabold text-slate-900 leading-snug">${r.no}. ${r.ruangan}</p>
+                <span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold shrink-0 ${badgeCls}">${labelStatus}</span>
+              </div>
+              <div class="flex items-center justify-between text-[11px] text-slate-500">
+                <span>Skor: <strong class="text-slate-800">${skor}/10</strong></span>
+                <span class="font-black text-navy-900">${pct}%</span>
+              </div>
+              <div class="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden">
+                <div class="${barCls} h-1.5 rounded-full" style="width: ${pct}%"></div>
+              </div>
+            </div>
+          `;
         }).join('');
       }
     }
 
     function initCharts() {
       if (typeof Chart === 'undefined') return;
-      const stbm = getStbmAverages();
 
-      const elTrend = document.getElementById('dashTrendChart');
-      if (elTrend) {
-        dashTrendChart = new Chart(elTrend.getContext('2d'), {
-          type: 'line',
-          data: {
-            labels: ['September 2026', 'Oktober 2026', 'Nov - Des 2026'],
-            datasets: [
-              {
-                label: 'Capaian 5 Pilar STBM (%)',
-                data: [71.2, 74.8, stbm.avg],
-                borderColor: '#2563eb',
-                backgroundColor: 'rgba(37, 99, 235, 0.1)',
-                fill: true,
-                tension: 0.35,
-                pointRadius: 5,
-                pointBackgroundColor: '#2563eb'
-              },
-              {
-                label: 'Kepatuhan SOP Sampah (%)',
-                data: [84.0, 90.0, getSopOverallAverage()],
-                borderColor: '#10b981',
-                backgroundColor: 'transparent',
-                borderDash: [5, 5],
-                tension: 0.35,
-                pointRadius: 5,
-                pointBackgroundColor: '#10b981'
-              }
-            ]
-          },
+      // 1. Bar Chart 9 Ruangan
+      const ruanganEl = document.getElementById('dashBarRuanganChart');
+      if (ruanganEl) {
+        dashBarRuanganChart = new Chart(ruanganEl.getContext('2d'), {
+          type: 'bar',
+          data: getRuanganChartData(),
           options: {
             responsive: true,
             maintainAspectRatio: false,
-            plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: ctx => ` Kepatuhan SOP: ${ctx.parsed.y}%`
+                }
+              }
+            },
             scales: {
-              y: { min: 50, max: 100, ticks: { callback: function(v) { return v + '%'; } }, grid: { color: '#f1f5f9' } },
-              x: { grid: { display: false } }
+              y: { min: 0, max: 100, ticks: { callback: v => v + '%' }, grid: { color: '#f1f5f9' } },
+              x: { grid: { display: false }, ticks: { font: { size: 10 } } }
             }
           }
         });
       }
 
-      const elDoughnut = document.getElementById('dashDoughnut5Pilar');
-      if (elDoughnut) {
-        dashDoughnut5Pilar = new Chart(elDoughnut.getContext('2d'), {
+      // 2. Donut Chart Proporsi Kategori
+      const doughnutEl = document.getElementById('dashDoughnutKategori');
+      if (doughnutEl) {
+        const cats = getCategoryCounts();
+        dashDoughnutKategori = new Chart(doughnutEl.getContext('2d'), {
           type: 'doughnut',
           data: {
-            labels: ['Pilar 1 (BABS)', 'Pilar 2 (CTPS)', 'Pilar 3 (PAMM)', 'Pilar 4 (Sampah)', 'Pilar 5 (Limbah Cair)'],
+            labels: ['PATUH (80-100%)', 'CUKUP PATUH (60-79%)', 'KURANG PATUH (<60%)'],
             datasets: [{
-              data: [stbm.p1, stbm.p2, stbm.p3, stbm.p4, stbm.p5],
-              backgroundColor: ['#2563eb', '#0ea5e9', '#10b981', '#f59e0b', '#8b5cf6'],
+              data: [cats.patuh, cats.cukup, cats.kurang],
+              backgroundColor: ['#10b981', '#f59e0b', '#ef4444'],
               borderWidth: 2,
               borderColor: '#ffffff'
             }]
@@ -1448,35 +1300,39 @@
         });
       }
 
-      const elRuangan = document.getElementById('dashBarRuanganChart');
-      if (elRuangan) {
-        dashBarRuanganChart = new Chart(elRuangan.getContext('2d'), {
+      // 3. Bar Chart Capaian Per 10 Indikator SOP
+      const indEl = document.getElementById('dashBarIndikatorChart');
+      if (indEl) {
+        dashBarIndikatorChart = new Chart(indEl.getContext('2d'), {
           type: 'bar',
-          data: getRuanganChartData(),
+          data: {
+            labels: sopIndicatorsList.map(i => `Ind. ${i.no}`),
+            datasets: [{
+              label: 'Kepatuhan Indikator (%)',
+              data: getIndicatorAverages(),
+              backgroundColor: '#2563eb',
+              borderRadius: 6,
+              barThickness: 32
+            }]
+          },
           options: {
             responsive: true,
             maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  title: items => {
+                    const idx = items[0].dataIndex;
+                    return `Indikator ${idx + 1}: ${sopIndicatorsList[idx].title}`;
+                  },
+                  label: ctx => ` Tingkat Kepatuhan: ${ctx.parsed.y}%`
+                }
+              }
+            },
             scales: {
-              y: { min: 0, max: 100, ticks: { callback: function(v) { return v + '%'; } }, grid: { color: '#f1f5f9' } },
-              x: { grid: { display: false }, ticks: { font: { size: 10 } } }
-            }
-          }
-        });
-      }
-
-      const elDesa = document.getElementById('stbmDesaBarChart');
-      if (elDesa) {
-        stbmDesaBarChart = new Chart(elDesa.getContext('2d'), {
-          type: 'bar',
-          data: getStbmDesaChartData(),
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: {
-              y: { min: 50, max: 100, ticks: { callback: function(v) { return v + '%'; } }, grid: { color: '#f1f5f9' } },
-              x: { grid: { display: false }, ticks: { font: { size: 11 } } }
+              y: { min: 0, max: 100, ticks: { callback: v => v + '%' }, grid: { color: '#f1f5f9' } },
+              x: { grid: { display: false } }
             }
           }
         });
@@ -1484,203 +1340,87 @@
     }
 
     function getRuanganChartData() {
-      const labels = sopRuanganData.map(function(r) {
-        return r.ruangan.replace('Ruang ', '').replace(' (Poli Umum)', '').replace(' (Poli Gigi)', '');
-      });
-      const values = sopRuanganData.map(function(r) {
-        const sum = r.scores.reduce(function(a, b) { return a + b; }, 0);
+      const labels = sopRuanganData.map(r => r.ruangan.replace('Ruang ', '').replace(' (Poli Umum)', '').replace(' (Poli Gigi)', ''));
+      const values = sopRuanganData.map(r => {
+        const sum = r.scores.reduce((a, b) => a + b, 0);
         return (sum / 10) * 100;
       });
       return {
-        labels: labels,
+        labels,
         datasets: [{
           label: 'Persentase Kepatuhan (%)',
           data: values,
-          backgroundColor: values.map(function(v) {
-            return v >= 80 ? '#10b981' : (v >= 60 ? '#f59e0b' : '#ef4444');
-          }),
+          backgroundColor: values.map(v => v >= 80 ? '#10b981' : (v >= 60 ? '#f59e0b' : '#ef4444')),
           borderRadius: 8,
-          barThickness: 28
-        }]
-      };
-    }
-
-    function getStbmDesaChartData() {
-      const labels = stbmDesaData.map(function(d) { return d.desa; });
-      const values = stbmDesaData.map(function(d) {
-        return +((d.p1 + d.p2 + d.p3 + d.p4 + d.p5) / 5).toFixed(1);
-      });
-      return {
-        labels: labels,
-        datasets: [{
-          label: 'Skor Rata-Rata 5 Pilar (%)',
-          data: values,
-          backgroundColor: '#2563eb',
-          borderRadius: 6
+          barThickness: 26
         }]
       };
     }
 
     function refreshAllViews() {
-      updateKpiCards();
-      renderStbmDesaTable();
+      updateKpiAndRoomCards();
       renderSopMatrixTable();
       renderSopLogsTable();
 
-      const stbm = getStbmAverages();
-      if (dashDoughnut5Pilar) {
-        dashDoughnut5Pilar.data.datasets[0].data = [stbm.p1, stbm.p2, stbm.p3, stbm.p4, stbm.p5];
-        dashDoughnut5Pilar.update();
-      }
       if (dashBarRuanganChart) {
         dashBarRuanganChart.data = getRuanganChartData();
         dashBarRuanganChart.update();
       }
-      if (stbmDesaBarChart) {
-        stbmDesaBarChart.data = getStbmDesaChartData();
-        stbmDesaBarChart.update();
+      if (dashDoughnutKategori) {
+        const cats = getCategoryCounts();
+        dashDoughnutKategori.data.datasets[0].data = [cats.patuh, cats.cukup, cats.kurang];
+        dashDoughnutKategori.update();
       }
-      if (dashTrendChart) {
-        dashTrendChart.data.datasets[0].data[2] = stbm.avg;
-        dashTrendChart.data.datasets[1].data[2] = getSopOverallAverage();
-        dashTrendChart.update();
+      if (dashBarIndikatorChart) {
+        dashBarIndikatorChart.data.datasets[0].data = getIndicatorAverages();
+        dashBarIndikatorChart.update();
       }
     }
 
     // ---------------------------------------------------------------------
-    // 7. MODUL STBM (12 DESA) LOGIC
-    // ---------------------------------------------------------------------
-    function prefillDesaStbmValues() {
-      const desaName = document.getElementById('stbmDesa').value;
-      const found = stbmDesaData.find(function(d) { return d.desa === desaName; });
-      if (found) {
-        document.getElementById('stbmJumlahKK').value = found.kk;
-        document.getElementById('stbmP1').value = found.p1;
-        document.getElementById('stbmP2').value = found.p2;
-        document.getElementById('stbmP3').value = found.p3;
-        document.getElementById('stbmP4').value = found.p4;
-        document.getElementById('stbmP5').value = found.p5;
-      }
-    }
-
-    function renderStbmDesaTable() {
-      const filterEl = document.getElementById('filterDesaDropdown');
-      const selectedDesa = filterEl ? filterEl.value : '';
-      const tbody = document.getElementById('tbodyStbmDesa');
-      if (!tbody) return;
-      tbody.innerHTML = '';
-
-      const filtered = selectedDesa
-        ? stbmDesaData.filter(function(d) { return d.desa === selectedDesa; })
-        : stbmDesaData;
-
-      filtered.forEach(function(d) {
-        const avg = ((d.p1 + d.p2 + d.p3 + d.p4 + d.p5) / 5).toFixed(1);
-        const isGood = parseFloat(avg) >= 75;
-        const tr = document.createElement('tr');
-        tr.className = "hover:bg-slate-50 transition";
-        tr.innerHTML =
-          '<td class="py-3 px-3.5 font-bold text-slate-400">' + d.no + '</td>' +
-          '<td class="py-3 px-3.5 font-extrabold text-slate-900">' + d.desa + '</td>' +
-          '<td class="py-3 px-3.5 text-slate-600">' + d.petugas + '</td>' +
-          '<td class="py-3 px-3.5 text-center font-bold text-slate-800">' + d.kk + ' KK</td>' +
-          '<td class="py-3 px-3 text-center font-bold text-emerald-700 bg-emerald-50/30">' + d.p1 + '%</td>' +
-          '<td class="py-3 px-3 text-center font-bold text-blue-700 bg-blue-50/30">' + d.p2 + '%</td>' +
-          '<td class="py-3 px-3 text-center font-bold text-cyan-700 bg-cyan-50/30">' + d.p3 + '%</td>' +
-          '<td class="py-3 px-3 text-center font-bold text-amber-700 bg-amber-50/30">' + d.p4 + '%</td>' +
-          '<td class="py-3 px-3 text-center font-bold text-indigo-700 bg-indigo-50/30">' + d.p5 + '%</td>' +
-          '<td class="py-3 px-3.5 text-center font-black text-navy-900">' + avg.replace('.', ',') + '%</td>' +
-          '<td class="py-3 px-3.5 text-center">' +
-            '<span class="px-2.5 py-1 rounded-full text-[10px] font-bold ' + (isGood ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800') + '">' +
-              (isGood ? 'STBM / ODF Maju' : 'Pembinaan') +
-            '</span>' +
-          '</td>';
-        tbody.appendChild(tr);
-      });
-    }
-
-    function handleSaveStbm(e) {
-      e.preventDefault();
-      const desaName = document.getElementById('stbmDesa').value;
-      const petugas = document.getElementById('stbmPetugas').value;
-      const kk = parseInt(document.getElementById('stbmJumlahKK').value, 10) || 400;
-      const p1 = parseFloat(document.getElementById('stbmP1').value);
-      const p2 = parseFloat(document.getElementById('stbmP2').value);
-      const p3 = parseFloat(document.getElementById('stbmP3').value);
-      const p4 = parseFloat(document.getElementById('stbmP4').value);
-      const p5 = parseFloat(document.getElementById('stbmP5').value);
-
-      const targetDesa = stbmDesaData.find(function(d) { return d.desa === desaName; });
-      if (targetDesa) {
-        targetDesa.kk = kk;
-        targetDesa.p1 = p1;
-        targetDesa.p2 = p2;
-        targetDesa.p3 = p3;
-        targetDesa.p4 = p4;
-        targetDesa.p5 = p5;
-        targetDesa.petugas = petugas;
-      }
-
-      refreshAllViews();
-      showToast("Data STBM Desa " + desaName + " berhasil diperbarui!");
-      switchPage('rekap-stbm');
-    }
-
-    function exportStbmCsv() {
-      const csv = ["No,Nama Desa,Petugas/Bidan Desa,Jumlah KK,Pilar 1 (BABS) %,Pilar 2 (CTPS) %,Pilar 3 (PAMM) %,Pilar 4 (Sampah) %,Pilar 5 (SPAL) %,Total Skor %"];
-      stbmDesaData.forEach(function(d) {
-        const avg = ((d.p1 + d.p2 + d.p3 + d.p4 + d.p5) / 5).toFixed(1);
-        csv.push(d.no + ',"' + d.desa + '","' + d.petugas + '",' + d.kk + ',' + d.p1 + ',' + d.p2 + ',' + d.p3 + ',' + d.p4 + ',' + d.p5 + ',' + avg);
-      });
-      downloadCsvFile(csv.join('\n'), 'Rekapitulasi_5_Pilar_STBM_12_Desa_Mandrehe_Utara.csv');
-    }
-
-    // ---------------------------------------------------------------------
-    // 8. MODUL INSTRUMEN & REKAPITULASI SOP PEMILAHAN SAMPAH (10 INDIKATOR)
+    // 6. MODUL INSTRUMEN & REKAPITULASI SOP PEMILAHAN SAMPAH (10 INDIKATOR)
     // ---------------------------------------------------------------------
     function renderChecklistSop() {
       const tbody = document.getElementById('checklistSopBody');
       if (!tbody) return;
-      tbody.innerHTML = sopIndicatorsList.map(function(ind) {
-        return '<tr class="hover:bg-slate-50/80 transition">' +
-          '<td class="py-3 px-3 text-center font-bold text-slate-500">' + ind.no + '</td>' +
-          '<td class="py-3 px-3.5 leading-relaxed">' +
-            '<strong class="text-slate-900">' + ind.title + ':</strong> ' +
-            '<span class="text-slate-600">' + ind.desc + '</span>' +
-          '</td>' +
-          '<td class="py-3 px-3 text-center bg-emerald-50/30">' +
-            '<label class="inline-flex items-center justify-center w-8 h-8 rounded-lg cursor-pointer hover:bg-emerald-100">' +
-              '<input type="radio" name="sop_ind_' + ind.no + '" value="1" checked onchange="calculateLiveSopScore()" class="w-4 h-4 accent-emerald-600 cursor-pointer">' +
-            '</label>' +
-          '</td>' +
-          '<td class="py-3 px-3 text-center bg-rose-50/30">' +
-            '<label class="inline-flex items-center justify-center w-8 h-8 rounded-lg cursor-pointer hover:bg-rose-100">' +
-              '<input type="radio" name="sop_ind_' + ind.no + '" value="0" onchange="calculateLiveSopScore()" class="w-4 h-4 accent-rose-600 cursor-pointer">' +
-            '</label>' +
-          '</td>' +
-          '<td class="py-2.5 px-3">' +
-            '<input type="text" id="sop_ket_' + ind.no + '" placeholder="Keterangan / temuan..." class="w-full px-2.5 py-1.5 text-[11px] bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500">' +
-          '</td>' +
-        '</tr>';
-      }).join('');
+      tbody.innerHTML = sopIndicatorsList.map(ind => `
+        <tr class="hover:bg-slate-50/80 transition">
+          <td class="py-3 px-3 text-center font-bold text-slate-500">${ind.no}</td>
+          <td class="py-3 px-3.5 leading-relaxed">
+            <strong class="text-slate-900">${ind.title}:</strong>
+            <span class="text-slate-600">${ind.desc}</span>
+          </td>
+          <td class="py-3 px-3 text-center bg-emerald-50/30">
+            <label class="inline-flex items-center justify-center w-8 h-8 rounded-lg cursor-pointer hover:bg-emerald-100">
+              <input type="radio" name="sop_ind_${ind.no}" value="1" checked onchange="calculateLiveSopScore()" class="w-4 h-4 accent-emerald-600 cursor-pointer">
+            </label>
+          </td>
+          <td class="py-3 px-3 text-center bg-rose-50/30">
+            <label class="inline-flex items-center justify-center w-8 h-8 rounded-lg cursor-pointer hover:bg-rose-100">
+              <input type="radio" name="sop_ind_${ind.no}" value="0" onchange="calculateLiveSopScore()" class="w-4 h-4 accent-rose-600 cursor-pointer">
+            </label>
+          </td>
+          <td class="py-2.5 px-3">
+            <input type="text" id="sop_ket_${ind.no}" placeholder="Keterangan / temuan..." class="w-full px-2.5 py-1.5 text-[11px] bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500">
+          </td>
+        </tr>
+      `).join('');
       calculateLiveSopScore();
     }
 
     function setAllSopIndicators(val) {
-      sopIndicatorsList.forEach(function(ind) {
-        const radios = document.getElementsByName('sop_ind_' + ind.no);
-        radios.forEach(function(r) {
-          if (parseInt(r.value, 10) === val) r.checked = true;
-        });
+      sopIndicatorsList.forEach(ind => {
+        const radios = document.getElementsByName(`sop_ind_${ind.no}`);
+        radios.forEach(r => { if (parseInt(r.value) === val) r.checked = true; });
       });
       calculateLiveSopScore();
     }
 
     function calculateLiveSopScore() {
       let score = 0;
-      sopIndicatorsList.forEach(function(ind) {
-        const selected = document.querySelector('input[name="sop_ind_' + ind.no + '"]:checked');
-        if (selected && parseInt(selected.value, 10) === 1) score++;
+      sopIndicatorsList.forEach(ind => {
+        const selected = document.querySelector(`input[name="sop_ind_${ind.no}"]:checked`);
+        if (selected && parseInt(selected.value) === 1) score++;
       });
 
       const pct = score * 10;
@@ -1689,60 +1429,62 @@
       const badge = document.getElementById('liveSopCategoryBadge');
 
       if (scoreEl) scoreEl.innerText = score;
-      if (pctEl) pctEl.innerText = pct + '%';
+      if (pctEl) pctEl.innerText = `${pct}%`;
 
       if (badge) {
         if (pct >= 80) {
           badge.className = "inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-100 text-emerald-800 font-extrabold text-sm border border-emerald-300";
-          badge.innerHTML = '<i class="fa-solid fa-circle-check"></i> PATUH (Baik) : 80% – 100%';
+          badge.innerHTML = `<i class="fa-solid fa-circle-check"></i> PATUH (Baik) : 80% – 100%`;
         } else if (pct >= 60) {
           badge.className = "inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-amber-100 text-amber-800 font-extrabold text-sm border border-amber-300";
-          badge.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> CUKUP PATUH (Sedang) : 60% – 79%';
+          badge.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> CUKUP PATUH (Sedang) : 60% – 79%`;
         } else {
           badge.className = "inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-rose-100 text-rose-800 font-extrabold text-sm border border-rose-300";
-          badge.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> KURANG PATUH (Rendah) : &lt; 60%';
+          badge.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> KURANG PATUH (Rendah) : < 60%`;
         }
       }
-      return { score: score, pct: pct };
+      return { score, pct };
     }
 
     function handleSaveSopObservation(e) {
       e.preventDefault();
       const ruangan = document.getElementById('sopRuangan').value;
       const tanggal = document.getElementById('sopTanggal').value;
+      const jam = document.getElementById('sopJamObservasi').value;
       const pemantau = document.getElementById('sopPemantau').value;
-      const kendala = document.getElementById('sopKendala').value || "Tidak ada kendala signifikan";
-      const tindakLanjut = document.getElementById('sopTindakLanjut').value || "Pertahankan pelaksanaan SOP pemilahan sampah";
+      const kendala = document.getElementById('sopKendala').value.trim() || "Tidak ada kendala signifikan";
+      const tindakLanjut = document.getElementById('sopTindakLanjut').value.trim() || "Pertahankan pelaksanaan SOP pemilahan sampah";
 
       const scoresArr = [];
-      sopIndicatorsList.forEach(function(ind) {
-        const selected = document.querySelector('input[name="sop_ind_' + ind.no + '"]:checked');
-        scoresArr.push(selected ? parseInt(selected.value, 10) : 1);
+      sopIndicatorsList.forEach(ind => {
+        const selected = document.querySelector(`input[name="sop_ind_${ind.no}"]:checked`);
+        scoresArr.push(selected ? parseInt(selected.value) : 1);
       });
 
-      const totalSkor = scoresArr.reduce(function(a, b) { return a + b; }, 0);
+      const totalSkor = scoresArr.reduce((a, b) => a + b, 0);
       const persen = totalSkor * 10;
       const kategori = persen >= 80 ? "PATUH (Baik)" : (persen >= 60 ? "CUKUP PATUH (Sedang)" : "KURANG PATUH (Rendah)");
 
-      const unitObj = sopRuanganData.find(function(u) { return u.ruangan === ruangan; });
+      const unitObj = sopRuanganData.find(u => u.ruangan === ruangan);
       if (unitObj) {
         unitObj.scores = scoresArr;
       }
 
-      const nowTime = new Date().toTimeString().slice(0, 5);
       sopObservationLogs.unshift({
-        timestamp: tanggal + " " + nowTime,
-        pemantau: pemantau,
-        ruangan: ruangan,
+        id: Date.now(),
+        tanggal,
+        jam,
+        pemantau,
+        ruangan,
         skor: totalSkor,
-        persen: persen,
-        kategori: kategori,
-        kendala: kendala,
-        tindakLanjut: tindakLanjut
+        persen,
+        kategori,
+        kendala,
+        tindakLanjut
       });
 
       refreshAllViews();
-      showToast("Hasil monitoring " + ruangan + " (" + persen + "% - " + kategori + ") berhasil disimpan!");
+      showToast(`Hasil monitoring ${ruangan} (${persen}% - ${kategori}) berhasil disimpan!`);
       switchPage('rekap-sop');
     }
 
@@ -1755,80 +1497,102 @@
       let totalSkorSemua = 0;
       const totalMaksSemua = sopRuanganData.length * 10;
 
-      sopRuanganData.forEach(function(r) {
-        const skor = r.scores.reduce(function(a, b) { return a + b; }, 0);
+      sopRuanganData.forEach(r => {
+        const skor = r.scores.reduce((a, b) => a + b, 0);
         totalSkorSemua += skor;
         const pct = (skor / 10) * 100;
         const kat = pct >= 80 ? "PATUH (Baik)" : (pct >= 60 ? "CUKUP PATUH (Sedang)" : "KURANG PATUH (Rendah)");
         const badgeCls = pct >= 80 ? "bg-emerald-100 text-emerald-800" : (pct >= 60 ? "bg-amber-100 text-amber-800" : "bg-rose-100 text-rose-800");
 
-        const scoreCells = r.scores.map(function(s) {
-          return '<td class="py-2.5 px-2 border border-slate-200 text-center font-bold ' + (s === 1 ? 'text-emerald-700 bg-emerald-50/20' : 'text-rose-600 bg-rose-50') + '">' +
-            s + '</td>';
-        }).join('');
+        const scoreCells = r.scores.map(s => `
+          <td class="py-2.5 px-2 border border-slate-200 text-center font-bold ${s === 1 ? 'text-emerald-700 bg-emerald-50/20' : 'text-rose-600 bg-rose-50'}">
+            ${s}
+          </td>
+        `).join('');
 
         const tr = document.createElement('tr');
         tr.className = "hover:bg-slate-50 transition";
-        tr.innerHTML =
-          '<td class="py-2.5 px-3 border border-slate-200 text-center font-bold text-slate-400">' + r.no + '</td>' +
-          '<td class="py-2.5 px-3.5 border border-slate-200 font-bold text-slate-900">' + r.ruangan + '</td>' +
-          scoreCells +
-          '<td class="py-2.5 px-3 border border-slate-200 text-center font-extrabold text-navy-900">' + skor + '</td>' +
-          '<td class="py-2.5 px-3 border border-slate-200 text-center text-slate-500">10</td>' +
-          '<td class="py-2.5 px-3 border border-slate-200 text-center font-black text-blue-700">' + pct + '%</td>' +
-          '<td class="py-2.5 px-3.5 border border-slate-200 text-center">' +
-            '<span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold ' + badgeCls + '">' + kat + '</span>' +
-          '</td>';
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 border border-slate-200 text-center font-bold text-slate-400">${r.no}</td>
+          <td class="py-2.5 px-3.5 border border-slate-200 font-bold text-slate-900">${r.ruangan}</td>
+          ${scoreCells}
+          <td class="py-2.5 px-3 border border-slate-200 text-center font-extrabold text-navy-900">${skor}</td>
+          <td class="py-2.5 px-3 border border-slate-200 text-center text-slate-500">10</td>
+          <td class="py-2.5 px-3 border border-slate-200 text-center font-black text-blue-700">${pct}%</td>
+          <td class="py-2.5 px-3.5 border border-slate-200 text-center">
+            <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold ${badgeCls}">${kat}</span>
+          </td>
+        `;
         tbody.appendChild(tr);
       });
 
-      const avgPct = ((totalSkorSemua / totalMaksSemua) * 100).toFixed(1).replace('.', ',');
-      const avgKat = (totalSkorSemua / totalMaksSemua) * 100 >= 80 ? "PATUH (Baik)" : "CUKUP PATUH (Sedang)";
+      const avgNumeric = (totalSkorSemua / totalMaksSemua) * 100;
+      const avgPct = avgNumeric.toFixed(1).replace('.', ',');
+      const avgKat = avgNumeric >= 80 ? "PATUH (Baik)" : (avgNumeric >= 60 ? "CUKUP PATUH (Sedang)" : "KURANG PATUH (Rendah)");
+      const avgBadge = avgNumeric >= 80 ? "bg-emerald-600 text-white" : (avgNumeric >= 60 ? "bg-amber-500 text-white" : "bg-rose-600 text-white");
 
-      tfoot.innerHTML =
-        '<tr>' +
-          '<td colspan="12" class="py-3 px-4 border border-slate-300 text-right uppercase tracking-wide text-navy-900">' +
-            'RATA-RATA CAPAIAN PUSKESMAS MANDREHE UTARA' +
-          '</td>' +
-          '<td class="py-3 px-3 border border-slate-300 text-center text-navy-900">' + totalSkorSemua + '</td>' +
-          '<td class="py-3 px-3 border border-slate-300 text-center">' + totalMaksSemua + '</td>' +
-          '<td class="py-3 px-3 border border-slate-300 text-center text-emerald-700 text-sm">' + avgPct + '%</td>' +
-          '<td class="py-3 px-3.5 border border-slate-300 text-center">' +
-            '<span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold bg-emerald-600 text-white">' + avgKat + '</span>' +
-          '</td>' +
-        '</tr>';
+      tfoot.innerHTML = `
+        <tr>
+          <td colspan="12" class="py-3 px-4 border border-slate-300 text-right uppercase tracking-wide text-navy-900">
+            RATA-RATA CAPAIAN PUSKESMAS MANDREHE UTARA
+          </td>
+          <td class="py-3 px-3 border border-slate-300 text-center text-navy-900">${totalSkorSemua}</td>
+          <td class="py-3 px-3 border border-slate-300 text-center">${totalMaksSemua}</td>
+          <td class="py-3 px-3 border border-slate-300 text-center text-emerald-700 text-sm">${avgPct}%</td>
+          <td class="py-3 px-3.5 border border-slate-300 text-center">
+            <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold ${avgBadge}">${avgKat}</span>
+          </td>
+        </tr>
+      `;
     }
 
     function renderSopLogsTable() {
-      const filterEl = document.getElementById('filterLogRuangan');
-      const filterUnit = filterEl ? filterEl.value : '';
       const tbody = document.getElementById('tbodySopLogs');
       if (!tbody) return;
+      const filterUnit = document.getElementById('filterLogRuangan')?.value || '';
       tbody.innerHTML = '';
 
-      const filtered = filterUnit
-        ? sopObservationLogs.filter(function(l) { return l.ruangan === filterUnit; })
-        : sopObservationLogs;
+      const filtered = filterUnit ? sopObservationLogs.filter(l => l.ruangan === filterUnit) : sopObservationLogs;
 
-      filtered.forEach(function(l) {
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" class="text-center py-6 text-slate-400">Belum ada riwayat log input observasi untuk unit ini.</td></tr>`;
+        return;
+      }
+
+      filtered.forEach(l => {
         const badgeCls = l.persen >= 80 ? "bg-emerald-100 text-emerald-800" : (l.persen >= 60 ? "bg-amber-100 text-amber-800" : "bg-rose-100 text-rose-800");
         const tr = document.createElement('tr');
         tr.className = "hover:bg-slate-50 transition";
-        tr.innerHTML =
-          '<td class="py-3 px-3.5 font-mono text-[11px] text-slate-600">' + l.timestamp + '</td>' +
-          '<td class="py-3 px-3.5 font-semibold text-slate-800">' + l.pemantau + '</td>' +
-          '<td class="py-3 px-3.5 font-bold text-navy-900">' + l.ruangan + '</td>' +
-          '<td class="py-3 px-3 text-center font-extrabold">' + l.skor + ' / 10</td>' +
-          '<td class="py-3 px-3 text-center font-black text-blue-600">' + l.persen + '%</td>' +
-          '<td class="py-3 px-3 text-center">' +
-            '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold ' + badgeCls + '">' + l.kategori + '</span>' +
-          '</td>' +
-          '<td class="py-3 px-3.5 text-[11px] text-slate-600">' +
-            '<p><strong class="text-slate-800">Temuan:</strong> ' + l.kendala + '</p>' +
-            '<p class="mt-0.5"><strong class="text-emerald-700">Tindak Lanjut:</strong> ' + l.tindakLanjut + '</p>' +
-          '</td>';
+        tr.innerHTML = `
+          <td class="py-3 px-3.5 text-[11px] text-slate-600">
+            <span class="font-mono font-bold text-slate-800 block">${l.tanggal}</span>
+            <span class="text-[10px] text-slate-400">${l.jam}</span>
+          </td>
+          <td class="py-3 px-3.5 font-semibold text-slate-800">${l.pemantau}</td>
+          <td class="py-3 px-3.5 font-bold text-navy-900">${l.ruangan}</td>
+          <td class="py-3 px-3 text-center font-extrabold">${l.skor} / 10</td>
+          <td class="py-3 px-3 text-center font-black text-blue-600">${l.persen}%</td>
+          <td class="py-3 px-3 text-center">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold ${badgeCls}">${l.kategori}</span>
+          </td>
+          <td class="py-3 px-3.5 text-[11px] text-slate-600">
+            <p><strong class="text-slate-800">Temuan:</strong> ${l.kendala}</p>
+            <p class="mt-0.5"><strong class="text-emerald-700">Tindak Lanjut:</strong> ${l.tindakLanjut}</p>
+          </td>
+          <td class="py-3 px-3 text-center no-print">
+            <button onclick="deleteSopLog(${l.id})" title="Hapus Log" class="p-1.5 text-rose-500 hover:bg-rose-50 rounded-lg transition">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        `;
         tbody.appendChild(tr);
       });
+    }
+
+    function deleteSopLog(logId) {
+      sopObservationLogs = sopObservationLogs.filter(item => item.id !== logId);
+      refreshAllViews();
+      showToast("Riwayat log observasi berhasil dihapus.");
     }
 
     function switchSopSubTab(tab) {
@@ -1836,34 +1600,35 @@
       const logsDiv = document.getElementById('sopSub-logs');
       const btnMatrix = document.getElementById('subtab-matrix');
       const btnLogs = document.getElementById('subtab-logs');
+
       if (!matrixDiv || !logsDiv || !btnMatrix || !btnLogs) return;
 
       if (tab === 'matrix') {
         matrixDiv.classList.remove('hidden');
         logsDiv.classList.add('hidden');
-        btnMatrix.className = "px-4 py-2 rounded-xl text-xs font-bold bg-navy-900 text-white shadow-sm transition";
+        btnMatrix.className = "px-4 py-2 rounded-xl text-xs font-bold bg-navy-900 text-white shadow-xs transition";
         btnLogs.className = "px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition";
       } else {
         matrixDiv.classList.add('hidden');
         logsDiv.classList.remove('hidden');
-        btnLogs.className = "px-4 py-2 rounded-xl text-xs font-bold bg-navy-900 text-white shadow-sm transition";
+        btnLogs.className = "px-4 py-2 rounded-xl text-xs font-bold bg-navy-900 text-white shadow-xs transition";
         btnMatrix.className = "px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition";
       }
     }
 
     function exportSopExcelCsv() {
-      const csv = ["No,Ruangan / Unit Pelayanan,Ind. 1,Ind. 2,Ind. 3,Ind. 4,Ind. 5,Ind. 6,Ind. 7,Ind. 8,Ind. 9,Ind. 10,Skor Diperoleh,Skor Maks,Persentase Kepatuhan,Kategori Kepatuhan"];
+      let csv = ["No,Ruangan / Unit Pelayanan,Ind. 1,Ind. 2,Ind. 3,Ind. 4,Ind. 5,Ind. 6,Ind. 7,Ind. 8,Ind. 9,Ind. 10,Skor Diperoleh,Skor Maks,Persentase Kepatuhan,Kategori Kepatuhan"];
       let totalSkor = 0;
-      sopRuanganData.forEach(function(r) {
-        const skor = r.scores.reduce(function(a, b) { return a + b; }, 0);
+      sopRuanganData.forEach(r => {
+        const skor = r.scores.reduce((a, b) => a + b, 0);
         totalSkor += skor;
         const pct = (skor / 10) * 100;
         const kat = pct >= 80 ? "PATUH (Baik)" : (pct >= 60 ? "CUKUP PATUH (Sedang)" : "KURANG PATUH (Rendah)");
-        csv.push(r.no + ',"' + r.ruangan + '",' + r.scores.join(',') + ',' + skor + ',10,' + pct + '%,"' + kat + '"');
+        csv.push(`${r.no},"${r.ruangan}",${r.scores.join(',')},${skor},10,${pct}%,"${kat}"`);
       });
       const avg = ((totalSkor / (sopRuanganData.length * 10)) * 100).toFixed(1);
-      csv.push(',"RATA-RATA CAPAIAN PUSKESMAS",,,,,,,,,,,' + totalSkor + ',' + (sopRuanganData.length * 10) + ',' + avg + '%,"PATUH (Baik)"');
-      downloadCsvFile(csv.join('\n'), 'Rekapitulasi_Monitoring_Kepatuhan_SOP_10_Indikator_Mandrehe_Utara.csv');
+      csv.push(`,"RATA-RATA CAPAIAN PUSKESMAS",,,,,,,,,,,${totalSkor},${sopRuanganData.length * 10},${avg}%,"PATUH (Baik)"`);
+      downloadCsvFile(csv.join('\n'), 'Rekapitulasi_SIPATUH_10_Indikator_Mandrehe_Utara.csv');
     }
 
     function downloadCsvFile(content, filename) {
